@@ -19,7 +19,7 @@ public class Permission extends BaseEntity {
     /**
      * 模块名称
      */
-    private String moduleName;
+    private String menuName;
 
     /**
      * 权限描述

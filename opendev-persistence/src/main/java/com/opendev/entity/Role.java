@@ -11,14 +11,13 @@ import lombok.NoArgsConstructor;
 public class Role extends BaseEntity {
 
     /**
-     * 角色主键
-     */
-    private Integer roleId;
-
-    /**
      * 角色名称
      */
     private String roleName;
 
+    /**
+     * 角色描述
+     */
+    private String roleDesc;
 
 }
