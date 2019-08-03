@@ -3,30 +3,28 @@ package com.opendev.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 /**
- * 菜单表
+ * 权限菜单表
  */
-
 @Data
 @NoArgsConstructor
-public class Menu extends BaseEntity {
+public class Permission extends BaseEntity {
+
 
     /**
-     * 菜单主键
-     */
-    private Integer menuId;
-
-    /**
-     * 父菜单主键
+     * 父级主键
      */
     private Integer parentId;
 
     /**
-     * 菜单名称
+     * 模块名称
      */
-    private String menuName;
+    private String moduleName;
+
+    /**
+     * 权限描述
+     */
+    private String permDesc;
 
     /**
      * 菜单类型，0：菜单  `：业务按钮
@@ -39,19 +37,18 @@ public class Menu extends BaseEntity {
     private String menuIcon;
 
     /**
-     * 菜单url
+     * 权限url
      */
-    private String menuUrl;
+    private String permUrl;
 
     /**
-     * 菜单权限
+     * 权限标识
      */
-    private String authority;
+    private String perms;
 
     /**
      * 菜单的序号
      */
     private Integer sortNum;
 
-    private List<Menu> childMenu;
 }

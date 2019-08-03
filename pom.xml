@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.0.1.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -30,8 +30,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <shiro-spring.version>1.4.0</shiro-spring.version>
-        <jwt.version>3.2.0</jwt.version>
         <mysql-connector.version>5.1.38</mysql-connector.version>
         <druid-version>1.1.8</druid-version>
         <commons-lang3.version>3.4</commons-lang3.version>
@@ -77,15 +75,18 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- JwtPermission -->
         <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>${shiro-spring.version}</version>
+            <groupId>com.github.whvcse.JwtPermission</groupId>
+            <artifactId>jwtp-spring-boot-starter</artifactId>
+            <version>2.0.2</version>
         </dependency>
+
+        <!-- 加密解密工具类 -->
         <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-            <version>${jwt.version}</version>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>EndecryptUtil</artifactId>
+            <version>1.0.5</version>
         </dependency>
 
         <!--Druid数据源-->
@@ -139,6 +140,10 @@
         <repository>
             <id>alimaven</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 

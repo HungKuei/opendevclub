@@ -16,11 +16,6 @@ import java.util.List;
 public class User extends BaseEntity {
 
     /**
-     * 用户主键
-     */
-    private Integer userId;
-
-    /**
      * 账号
      */
     private String username;
@@ -48,7 +43,7 @@ public class User extends BaseEntity {
     /**
      * 性别
      */
-    private String sex;
+    private Integer sex;
 
     /**
      * 邮箱
@@ -77,14 +72,9 @@ public class User extends BaseEntity {
     private Date birthday;
 
     /**
-     * 状态值（1：正常，2：禁用，3：删除）
-     */
-    private Integer status;
-
-    /**
      * 权限
      */
-    private List<Jurisdiction> jurisdictions;
+    private List<Permission> permissions;
 
     /**
      * 角色

@@ -11,8 +11,5 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("hello")
-    public String test(){
-        return "Hello World";
-    }
+
 }

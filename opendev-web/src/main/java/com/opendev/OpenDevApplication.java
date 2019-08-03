@@ -3,7 +3,9 @@ package com.opendev;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.wf.jwtp.configuration.EnableJwtPermission;
 
+@EnableJwtPermission
 @SpringBootApplication
 @MapperScan(basePackages = "com.opendev.mapper")
 public class OpenDevApplication {
