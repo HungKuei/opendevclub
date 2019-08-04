@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-permisson" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-persistence" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-web" charset="UTF-8" />

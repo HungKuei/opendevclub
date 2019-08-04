@@ -1,4 +1,4 @@
-package com.opendev.entity;
+package com.opendev.model;
 
 
 import lombok.Getter;

@@ -1,7 +1,8 @@
 package com.opendev.mapper;
 
-import com.opendev.entity.Role;
-import com.opendev.entity.UserRole;
+import com.opendev.model.Role;
+import com.opendev.model.UserRole;
+import tk.mybatis.mapper.common.BaseMapper;
 
 import java.util.List;
 

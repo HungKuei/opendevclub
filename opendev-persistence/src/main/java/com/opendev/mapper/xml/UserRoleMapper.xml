@@ -6,7 +6,7 @@
         select role_id from t_user_role where user_id = #{userId}
     </select>
     <!-- 查询用户所拥有的角色 -->
-    <select id="selectRolesByUserId" resultType="com.opendev.entity.Role">
+    <select id="selectRolesByUserId" resultType="com.opendev.model.Role">
         select * from t_role where id in (
           select role_id from t_user_role where user_id = #{userId}
         )

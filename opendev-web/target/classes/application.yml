@@ -1,0 +1,33 @@
+## ����˿�
+server:
+    port: 8081
+spring:
+    profiles:
+        active: dev
+    datasource:
+        #��ʼ����С����С�����
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        # ���û�ȡ���ӵȴ���ʱ��ʱ��
+        maxWait: 60000
+        # ���ü����òŽ���һ�μ�⣬�����Ҫ�رյĿ������ӣ���λ�Ǻ���
+        timeBetweenEvictionRunsMillis: 60000
+        # ����һ�������ڳ�����С�����ʱ�䣬��λ�Ǻ���
+        minEvictableIdleTimeMillis: 300000
+        # У��SQL��Oracle���� spring.datasource.validationQuery=SELECT 1 FROM DUAL���������validationQuery�������������������
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        # ��PSCache������ָ��ÿ��������PSCache�Ĵ�С
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize : 20
+        # ���ü��ͳ�����ص�filters��ȥ�����ؽ���sql�޷�ͳ�ƣ�'wall'���ڷ���ǽ
+        filters: stat, wall, logback
+        connectionProperties : druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+    ## jsonʱ���ʽ����
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8

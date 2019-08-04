@@ -1,6 +1,7 @@
 package com.opendev.mapper;
 
-import com.opendev.entity.User;
+import com.opendev.model.User;
+import tk.mybatis.mapper.common.BaseMapper;
 
 
 /**

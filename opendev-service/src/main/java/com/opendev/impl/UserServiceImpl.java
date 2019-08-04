@@ -1,6 +1,6 @@
 package com.opendev.impl;
 
-import com.opendev.entity.User;
+import com.opendev.model.User;
 import com.opendev.mapper.UserMapper;
 import com.opendev.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

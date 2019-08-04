@@ -1,6 +1,6 @@
 package com.opendev.impl;
 
-import com.opendev.entity.Role;
+import com.opendev.model.Role;
 import com.opendev.mapper.UserRoleMapper;
 import com.opendev.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;

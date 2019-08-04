@@ -1,6 +1,6 @@
 package com.opendev.service;
 
-import com.opendev.entity.User;
+import com.opendev.model.User;
 
 public interface UserService {
 

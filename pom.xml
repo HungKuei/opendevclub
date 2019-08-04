@@ -15,8 +15,10 @@
     <modules>
         <module>opendev-common</module>
         <module>opendev-persistence</module>
+        <module>opendev-permisson</module>
         <module>opendev-service</module>
         <module>opendev-web</module>
+
     </modules>
 
     <parent>
@@ -30,6 +32,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <shiro.version>1.4.0</shiro.version>
+        <shiro-redis.version>3.1.0</shiro-redis.version>
         <mysql-connector.version>5.1.38</mysql-connector.version>
         <druid-version>1.1.8</druid-version>
         <commons-lang3.version>3.4</commons-lang3.version>
@@ -61,6 +65,38 @@
             <version>2.0.0</version>
         </dependency>
 
+        <!-- shiro spring. -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!-- shiro ehcache -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+
+        <!-- shiro+redis缓存插件 -->
+        <dependency>
+            <groupId>org.crazycake</groupId>
+            <artifactId>shiro-redis</artifactId>
+            <version>${shiro-redis.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>4.1.5</version>
+        </dependency>
+
         <!-- redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -75,20 +111,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- JwtPermission -->
-        <dependency>
-            <groupId>com.github.whvcse.JwtPermission</groupId>
-            <artifactId>jwtp-spring-boot-starter</artifactId>
-            <version>2.0.2</version>
-        </dependency>
-
-        <!-- 加密解密工具类 -->
-        <dependency>
-            <groupId>com.github.whvcse</groupId>
-            <artifactId>EndecryptUtil</artifactId>
-            <version>1.0.5</version>
-        </dependency>
-
         <!--Druid数据源-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -96,16 +118,17 @@
             <version>${druid-version}</version>
         </dependency>
 
+        <!-- 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson.version}</version>
         </dependency>
 
         <!--fast json-->
@@ -141,12 +164,7 @@
             <id>alimaven</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </repository>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
     </repositories>
-
     <build>
         <plugins>
             <plugin>
