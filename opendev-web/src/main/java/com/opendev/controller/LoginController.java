@@ -1,7 +1,8 @@
 package com.opendev.controller;
 
-import com.opendev.base.BaseResponse;
+import com.opendev.base.APIResponse;
 import com.opendev.enums.ResultStatusCode;
+import com.opendev.model.User;
 import com.opendev.util.JsonResult;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -30,22 +31,23 @@ public class LoginController {
             @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String", paramType = "form")
     })
     @PostMapping("login")
-    public BaseResponse login(String username, String password) {
+    public APIResponse login(String username, String password) {
         try {
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);
             Subject subject = SecurityUtils.getSubject();
             subject.login(token);
             if (subject.isAuthenticated()) {
-                return JsonResult.success().put("token", subject.getSession().getId());
+                User user = (User) subject.getPrincipal();
+                return JsonResult.success(ResultStatusCode.SUCCESS.getCode(),"登录成功", user);
             } else {
-                return new BaseResponse(ResultStatusCode.SHIRO_ERROR);
+                return new APIResponse(ResultStatusCode.SHIRO_ERROR);
             }
-        } catch (IncorrectCredentialsException | UnknownAccountException e) {
-            return new BaseResponse(ResultStatusCode.NOT_EXIST_USER_OR_ERROR_PWD);
+        }catch (UnknownAccountException e) {
+            return new APIResponse(ResultStatusCode.NOT_EXIST_USER);
+        } catch (IncorrectCredentialsException e) {
+            return new APIResponse(ResultStatusCode.ACCOUNT_OR_PWD_ERROR);
         } catch (LockedAccountException e) {
-            return new BaseResponse(ResultStatusCode.USER_FROZEN);
-        } catch (Exception e) {
-            return new BaseResponse(ResultStatusCode.SYSTEM_ERR);
+            return new APIResponse(ResultStatusCode.USER_FROZEN.getCode(), e.getMessage());
         }
     }
 }

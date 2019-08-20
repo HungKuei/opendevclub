@@ -1,6 +1,6 @@
 package com.opendev.controller;
 
-import com.opendev.base.BaseResponse;
+import com.opendev.base.APIResponse;
 import com.opendev.enums.ResultStatusCode;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +18,9 @@ public class CommonController {
      * @return
      */
     @RequestMapping("/unauth")
-    public BaseResponse unauth(){
+    public APIResponse unauth(){
         SecurityUtils.getSubject().logout();
-        return new BaseResponse(ResultStatusCode.UNAUTHO_ERROR);
+        return new APIResponse(ResultStatusCode.UNAUTHO_ERROR);
     }
 
     /**
@@ -28,8 +28,8 @@ public class CommonController {
      * @return
      */
     @RequestMapping("/kickout")
-    public BaseResponse kickout(){
-        return new BaseResponse(ResultStatusCode.INVALID_TOKEN);
+    public APIResponse kickout(){
+        return new APIResponse(ResultStatusCode.INVALID_TOKEN);
     }
 
 }

@@ -6,36 +6,37 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
 
 /**
- * 统一返回相应参数实体类
+ * API 统一返回相应参数实体类
+ * @author hungkuei
  * @param <T>
  */
 
 @Data
-public class BaseResponse<T> extends HashMap<String, Object> {
+public class APIResponse<T> {
     private Integer code;
     private String msg;
+    private T result;
 
-    public BaseResponse() {
+    public APIResponse() {
         HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
                 .getResponse();
         response.setCharacterEncoding("UTF-8");
     }
 
-    public BaseResponse(Integer code, String msg) {
+    public APIResponse(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
 
-    public BaseResponse(ResultStatusCode resultStatusCode){
-        this(resultStatusCode.getCode(),resultStatusCode.getMessage());
+    public APIResponse(Integer code, String msg, T result){
+        this.code = code;
+        this.msg = msg;
+        this.result = result;
     }
 
-    @Override
-    public BaseResponse put(String key, Object value) {
-        super.put(key, value);
-        return this;
+    public APIResponse(ResultStatusCode resultStatusCode){
+        this(resultStatusCode.getCode(),resultStatusCode.getMessage());
     }
 }

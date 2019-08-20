@@ -10,6 +10,7 @@ import tk.mybatis.mapper.common.BaseMapper;
  * @author hungkuei
  * @since 2019-07-31
  */
+
 public interface UserMapper extends BaseMapper<User> {
 
     User selectByUsername(String username);

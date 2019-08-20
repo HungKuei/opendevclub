@@ -23,10 +23,13 @@ public class ShiroRealm extends AuthorizingRealm {
 
     @Autowired
     private UserService userService;
+
     @Autowired
     private RoleService roleService;
+
     @Autowired
     private PermissonService permissonService;
+
     /**
      * 认证信息.(身份验证) : Authentication 是用来验证用户身份
      *
@@ -40,8 +43,8 @@ public class ShiroRealm extends AuthorizingRealm {
         User user = userService.getUserByUsername(username);
         if (user != null) {
             // 用户为禁用状态
-            if (!user.getStatus().equals(1)) {
-                throw new DisabledAccountException();
+            if (!user.getStatus().equals(0)) {
+                throw new DisabledAccountException("你的账户已被禁用,请联系管理员激活");
             }
             log.info("---------------- Shiro 凭证认证成功 ----------------------");
             SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(

@@ -1,45 +1,46 @@
-## ������������
+##开发环境下服务端口
 server:
-    port: 8080
+  port: 8002
 
-## spring�������
 spring:
-    ## ����Դ����
-    datasource:
-        name: test
-        url: jdbc:mysql://localhost:3306/opendev?useUnicode=true&characterEncoding=utf8
-        username: root
-        password: 123456
-        # ʹ��druid����Դ
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-    ## redis����
-    redis:
-        host: 127.0.0.1
-        port: 6379
-        password : 123456
-        timeout: 1800
-        jedis:
-            pool:
-                max-active: 8
-                max-idle: 8
-                min-idle: 0
+  datasource: ## 阿里druid数据源配置
+    url: jdbc:mysql://localhost:3306/opendev?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:  ## redis基本配置
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 1800
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
 
-
-## �����ýڵ�Ϊ�����Ľڵ㣬�кܶ�ͬѧ���׽�������÷���spring�Ľڵ��£����������޷���ʶ��
+##mybatis配置
 mybatis:
-    mapper-locations: com.opendev.mapper.xml.*.xml  #ע�⣺һ��Ҫ��Ӧmapperӳ��xml�ļ�������·��
-    type-aliases-package: com.opendev.model  # ע�⣺��Ӧʵ�����·��
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.opendev.model
+  configuration:
+    map-underscore-to-camel-case: true
 
-#pagehelper��ҳ���
+##pagehelper分页配置
 pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
 
-##��־����
+##控制台日志打印
 logging:
-    level:
-      com.opendev: DEBUG
+  level:
+    com.opendev: DEBUG
+
+
+
+
+
 

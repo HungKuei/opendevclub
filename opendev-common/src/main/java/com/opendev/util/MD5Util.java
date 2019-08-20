@@ -28,4 +28,8 @@ public class MD5Util {
         return encrypt(encryptStr).substring(8, 24);
     }
 
+    public static void main(String[] args) {
+        System.out.println(encrypt("123456"));
+    }
+
 }

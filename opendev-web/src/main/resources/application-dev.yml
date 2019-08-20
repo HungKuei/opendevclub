@@ -1,45 +1,46 @@
-## ¿ª·¢»·¾³ÅäÖÃ
+##å¼€å‘ç¯å¢ƒä¸‹æœåŠ¡ç«¯å£
 server:
-    port: 8080
+  port: 8002
 
-## springÏà¹ØÅäÖÃ
 spring:
-    ## Êı¾İÔ´ÅäÖÃ
-    datasource:
-        name: test
-        url: jdbc:mysql://localhost:3306/opendev?useUnicode=true&characterEncoding=utf8
-        username: root
-        password: 123456
-        # Ê¹ÓÃdruidÊı¾İÔ´
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-    ## redisÅäÖÃ
-    redis:
-        host: 127.0.0.1
-        port: 6379
-        password : 123456
-        timeout: 1800
-        jedis:
-            pool:
-                max-active: 8
-                max-idle: 8
-                min-idle: 0
+  datasource: ## é˜¿é‡Œdruidæ•°æ®æºé…ç½®
+    url: jdbc:mysql://localhost:3306/opendev?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:  ## redisåŸºæœ¬é…ç½®
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 1800
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
 
-
-## ¸ÃÅäÖÃ½ÚµãÎª¶ÀÁ¢µÄ½Úµã£¬ÓĞºÜ¶àÍ¬Ñ§ÈİÒ×½«Õâ¸öÅäÖÃ·ÅÔÚspringµÄ½ÚµãÏÂ£¬µ¼ÖÂÅäÖÃÎŞ·¨±»Ê¶±ğ
+##mybatisé…ç½®
 mybatis:
-    mapper-locations: com.opendev.mapper.xml.*.xml  #×¢Òâ£ºÒ»¶¨Òª¶ÔÓ¦mapperÓ³ÉäxmlÎÄ¼şµÄËùÔÚÂ·¾¶
-    type-aliases-package: com.opendev.model  # ×¢Òâ£º¶ÔÓ¦ÊµÌåÀàµÄÂ·¾¶
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.opendev.model
+  configuration:
+    map-underscore-to-camel-case: true
 
-#pagehelper·ÖÒ³²å¼ş
+##pagehelperåˆ†é¡µé…ç½®
 pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
 
-##ÈÕÖ¾ÅäÖÃ
+##æ§åˆ¶å°æ—¥å¿—æ‰“å°
 logging:
-    level:
-      com.opendev: DEBUG
+  level:
+    com.opendev: DEBUG
+
+
+
+
+
 

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-permisson" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-persistence" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-web/src/main/resources/application-dev.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-web/src/main/resources/application-prod.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-web/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

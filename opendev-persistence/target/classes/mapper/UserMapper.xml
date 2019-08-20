@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.opendev.mapper.UserMapper">
 
-    <select id="getByUsername" resultType="com.opendev.model.User">
+    <select id="selectByUsername" resultType="com.opendev.model.User">
         select * from t_user where username=#{username}
     </select>
 </mapper>

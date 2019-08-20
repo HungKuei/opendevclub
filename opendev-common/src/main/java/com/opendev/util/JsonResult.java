@@ -1,49 +1,72 @@
 package com.opendev.util;
 
 
-import com.opendev.base.BaseResponse;
+import com.opendev.base.APIResponse;
 import com.opendev.enums.ResultStatusCode;
 
 
 /**
- * 返回结果对象
+ *  Json 返回结果对象
  * @author hungkuei
  * @date 2019-08-02
  */
 public class JsonResult {
 
     /**
-     * 统一成功响应
+     * 简单成功返回结果
      * @return
      */
-    public static BaseResponse<Object> success(){
-        return init(ResultStatusCode.SUCCESS);
+    public static APIResponse success(){
+        return init(ResultStatusCode.SUCCESS.getCode(), ResultStatusCode.SUCCESS.getMessage());
     }
-
     /**
-     * 自定义成功响应信息
+     * 自定义成功返回结果和状态码
+     * @param code
      * @param msg
+     * @param result
      * @return
      */
-    public static BaseResponse<Object> success(String msg){
-        return init(ResultStatusCode.SUCCESS.getCode(), msg);
+    public static APIResponse<Object> success(Integer code, String msg, Object result){
+        return init(code, msg, result);
     }
 
     /**
-     * 统一失败响应
+     * 成功返回结果和状态码
+     * @param resultStatusCode
+     * @param result
      * @return
      */
-    public static BaseResponse<Object> error(){
-        return init(ResultStatusCode.ERROR);
+    public static APIResponse<Object> success(ResultStatusCode resultStatusCode, Object result){
+        return init(resultStatusCode, result);
     }
 
     /**
-     * 自定义失败响应信息
+     * 简单失败返回结果
+     * @return
+     */
+    public static APIResponse error(){
+        return init(ResultStatusCode.ERROR.getCode(), ResultStatusCode.ERROR.getMessage());
+    }
+
+    /**
+     * 自定义失败返回结果和状态码
+     * @param code
      * @param msg
+     * @param result
      * @return
      */
-    public static BaseResponse<Object> error(String msg){
-        return init(ResultStatusCode.ERROR.getCode(), msg);
+    public static APIResponse<Object> error(Integer code, String msg, Object result){
+        return init(code, msg, result);
+    }
+
+    /**
+     * 失败返回结果和状态码
+     * @param resultStatusCode
+     * @param result
+     * @return
+     */
+    public static APIResponse<Object> error(ResultStatusCode resultStatusCode, Object result){
+        return init(resultStatusCode, result);
     }
 
     /**
@@ -51,7 +74,7 @@ public class JsonResult {
      * @param resultStatusCode
      * @return
      */
-    public static BaseResponse<Object> init(ResultStatusCode resultStatusCode){
+    public static APIResponse<Object> init(ResultStatusCode resultStatusCode, Object result){
         return init(resultStatusCode.getCode(), resultStatusCode.getMessage());
     }
 
@@ -61,7 +84,18 @@ public class JsonResult {
      * @param msg
      * @return
      */
-    public static BaseResponse<Object> init(Integer code, String msg){
-        return new BaseResponse(code, msg);
+    public static APIResponse init(Integer code, String msg){
+        return new APIResponse(code, msg);
+    }
+
+    /**
+     * 返回结果以及状态码
+     * @param code
+     * @param msg
+     * @param result
+     * @return
+     */
+    public static APIResponse init(Integer code, String msg, Object result){
+        return new APIResponse(code, msg, result);
     }
 }
