@@ -13,6 +13,7 @@ import tk.mybatis.mapper.common.BaseMapper;
 
 public interface UserMapper extends BaseMapper<User> {
 
-    User selectByUsername(String username);
+    User selectById(Integer id);
 
+    User selectByUsername(String username);
 }

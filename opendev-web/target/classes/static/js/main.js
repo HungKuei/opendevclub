@@ -1,5 +1,5 @@
 layui.config({
-    base: 'assets/module/'
+    base: 'module/'
 }).extend({
     formSelects: 'formSelects/formSelects-v4',
     treetable: 'treetable-lay/treetable',

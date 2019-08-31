@@ -1,7 +1,7 @@
 /** 登录页面样式 */
 
 body {
-    background-image: url("../../assets/images/bg_login.svg");
+    background-image: url("../images/bg_login.svg");
     background-position: center 110px;
     background-repeat: no-repeat;
     background-size: 100%;

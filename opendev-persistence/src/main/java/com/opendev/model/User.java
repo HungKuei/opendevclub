@@ -3,6 +3,7 @@ package com.opendev.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Table;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
+@Table(name = "t_user")
 public class User extends BaseEntity {
 
     /**

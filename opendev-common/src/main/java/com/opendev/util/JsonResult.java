@@ -26,7 +26,7 @@ public class JsonResult {
      * @param result
      * @return
      */
-    public static APIResponse<Object> success(Integer code, String msg, Object result){
+    public static APIResponse success(Integer code, String msg, Object result){
         return init(code, msg, result);
     }
 
@@ -36,7 +36,7 @@ public class JsonResult {
      * @param result
      * @return
      */
-    public static APIResponse<Object> success(ResultStatusCode resultStatusCode, Object result){
+    public static APIResponse success(ResultStatusCode resultStatusCode, Object result){
         return init(resultStatusCode, result);
     }
 
