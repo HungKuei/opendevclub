@@ -39,4 +39,18 @@ public class PublicResultConstant {
     public static final String UPDATE_ROLEINFO_ERROR  = "更新角色信息失败";
 
     public static final String UPDATE_SYSADMIN_INFO_ERROR  = "不能修改管理员信息!";
+
+    public static final Integer SUCCESS_CODE = 200;
+
+    public static final Integer FAIL_CODE = 500;
+
+    public static final Integer DEFAULT_TYPE_ = 0;
+
+    public static final Integer INVALID_TYPE = 1;
+
+    public static final Integer VALID_TYPE = 2;
+
+    public static final Integer STATUS_INVALID = 0;
+
+    public static final Integer STATUS_VALID = 1;
 }

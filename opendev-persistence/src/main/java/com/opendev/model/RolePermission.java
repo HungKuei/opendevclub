@@ -1,15 +1,20 @@
 package com.opendev.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Data
+@NoArgsConstructor
+@Table(name = "t_role_permission")
 public class RolePermission {
 
     /**
      * 主键
      */
+    @Id
     private Integer id;
 
     /**

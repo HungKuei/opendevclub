@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.opendev.mapper.PermissonMapper">
+
+    <sql id="Base_column_list">
+        perm_id, parent_id, menu_name, perm_desc, menu_type, menu_icon, perm_url, perms, sort_num, status, create_time, update_time
+    </sql>
+
+    <!-- 查询角色所拥有的权限 -->
+    <select id="selectPermissionByRoleId" parameterType="Integer" resultType="com.opendev.model.Permission">
+        select
+        <include refid="Base_column_list"/>
+        from t_permission where perm_id in (
+        select perm_id from t_role_permission where role_id = #{roleId}
+        )
+    </select>
+
+</mapper>

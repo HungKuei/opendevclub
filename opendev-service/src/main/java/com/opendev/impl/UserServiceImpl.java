@@ -16,17 +16,17 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User getUserById(Integer id) {
-        return userMapper.selectById(id);
+    public User getUserByUserId(Integer userId) {
+        return userMapper.selectByUserId(userId);
     }
 
     @Override
     public boolean addUser(User user) {
-        return userMapper.insert(user) == 1;
+        return userMapper.insertSelective(user) == 1;
     }
 
     @Override
-    public boolean updateUser(User user) {
+    public boolean updateByUserId(User user) {
         return userMapper.updateByPrimaryKeySelective(user) == 1;
     }
 

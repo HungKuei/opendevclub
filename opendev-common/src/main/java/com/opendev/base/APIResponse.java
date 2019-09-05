@@ -2,10 +2,7 @@ package com.opendev.base;
 
 import com.opendev.enums.ResultStatusCode;
 import lombok.Data;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.http.HttpStatus;
 
 /**
  * API 统一返回相应参数实体类
@@ -18,12 +15,6 @@ public class APIResponse<T> {
     private Integer code;
     private String msg;
     private T result;
-
-    public APIResponse() {
-        HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
-                .getResponse();
-        response.setCharacterEncoding("UTF-8");
-    }
 
     public APIResponse(Integer code, String msg) {
         this.code = code;
@@ -38,5 +29,9 @@ public class APIResponse<T> {
 
     public APIResponse(ResultStatusCode resultStatusCode){
         this(resultStatusCode.getCode(),resultStatusCode.getMessage());
+    }
+
+    public APIResponse(HttpStatus httpStatus){
+        this(httpStatus.value(), httpStatus.getReasonPhrase());
     }
 }

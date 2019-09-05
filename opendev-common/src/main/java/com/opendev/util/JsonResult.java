@@ -59,6 +59,10 @@ public class JsonResult {
         return init(code, msg, result);
     }
 
+
+    public static APIResponse<Object> error(ResultStatusCode resultStatusCode){
+        return init(resultStatusCode.getCode(), resultStatusCode.getMessage());
+    }
     /**
      * 失败返回结果和状态码
      * @param resultStatusCode
@@ -75,7 +79,7 @@ public class JsonResult {
      * @return
      */
     public static APIResponse<Object> init(ResultStatusCode resultStatusCode, Object result){
-        return init(resultStatusCode.getCode(), resultStatusCode.getMessage());
+        return init(resultStatusCode.getCode(), resultStatusCode.getMessage(), result);
     }
 
     /**

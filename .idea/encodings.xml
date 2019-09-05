@@ -8,8 +8,8 @@
     <file url="file://$PROJECT_DIR$/opendev-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-web/src/main/resources/application-dev.yml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-web/src/main/resources/application-prod.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-web/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-webapi" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

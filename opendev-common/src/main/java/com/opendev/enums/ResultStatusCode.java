@@ -2,8 +2,8 @@ package com.opendev.enums;
 
 public enum ResultStatusCode {
 
-    SUCCESS(200, "请求成功"),
-    ERROR(400, "请求失败！"),
+    SUCCESS(200, "成功"),
+    ERROR(400, "失败"),
     SIGN_ERROR(120, "签名错误"),
     TIME_OUT(130, "访问超时"),
     BAD_REQUEST(400, "参数解析失败"),

@@ -1,6 +1,7 @@
 package com.opendev.mapper;
 
 import com.opendev.model.User;
+import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.BaseMapper;
 
 
@@ -13,7 +14,9 @@ import tk.mybatis.mapper.common.BaseMapper;
 
 public interface UserMapper extends BaseMapper<User> {
 
-    User selectById(Integer id);
+    User selectByUsername(@Param("username") String username);
 
-    User selectByUsername(String username);
+    User selectByUserId(@Param("userId") Integer userId);
+
+    Integer updateById(User user);
 }

@@ -1,9 +1,12 @@
 package com.opendev.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +18,12 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Table(name = "t_user")
-public class User extends BaseEntity {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = -1157583928243692538L;
+
+    @Id
+    private Integer userId;
 
     /**
      * 账号
@@ -72,6 +80,23 @@ public class User extends BaseEntity {
      * 出生日期
      */
     private Date birthday;
+
+    /**
+     * 账号状态
+     */
+    private Integer status;
+
+    /**
+     * 注册时间
+     */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date updateTime;
 
     /**
      * 权限

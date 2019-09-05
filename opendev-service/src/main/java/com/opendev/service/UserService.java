@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface UserService {
 
-    User getUserById(Integer id);
+    User getUserByUserId(Integer userId);
 
     boolean addUser(User user);
 
-    boolean updateUser(User user);
+    boolean updateByUserId(User user);
 
     User getUserByUsername(String username);
 

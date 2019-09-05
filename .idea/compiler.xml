@@ -12,11 +12,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="opendev-common" />
-        <module name="opendev-permisson" />
         <module name="opendev-persistence" />
         <module name="opendev-service" />
-        <module name="opendev-web" />
+        <module name="opendev-webapi" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="opendev-permisson" target="1.8" />
+      <module name="opendev-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
