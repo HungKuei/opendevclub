@@ -2,34 +2,46 @@ package com.opendev.controller;
 
 import com.opendev.base.APIResponse;
 import com.opendev.enums.ResultStatusCode;
-import org.apache.shiro.SecurityUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 公共接口层
  */
-@RequestMapping("/common")
 @RestController
+@RequestMapping("/common")
 public class CommonController {
 
+
     /**
-     * 未授权跳转方法
+     * 未登录认证
      * @return
      */
-    @RequestMapping("/unauth")
+    @GetMapping("/unauth")
     public APIResponse unauth(){
-        SecurityUtils.getSubject().logout();
         return new APIResponse(ResultStatusCode.UNAUTHO_ERROR);
     }
+
 
     /**
      * 被踢出后跳转方法
      * @return
      */
-    @RequestMapping("/kickout")
+    @GetMapping("/kickout")
     public APIResponse kickout(){
         return new APIResponse(ResultStatusCode.INVALID_TOKEN);
     }
 
+    /**
+     * 错误请求处理
+     * @param code
+     * @return
+     */
+    @GetMapping("/error/{code}")
+    public APIResponse error(@PathVariable("code") Integer code){
+        if (code == 404){
+            return new APIResponse(ResultStatusCode.NOT_FOUND);
+        }else{
+            return new APIResponse(ResultStatusCode.SYSTEM_ERR);
+        }
+    }
 }

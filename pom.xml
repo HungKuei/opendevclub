@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!--版本号-->
-    <groupId>com.open</groupId>
-    <artifactId>opendev</artifactId>
+    <groupId>com.opendev</groupId>
+    <artifactId>opendevclub</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${project.version}</version>
 
-    <name>OpenDev</name>
-    <description>OpenDev project for Spring Boot</description>
+    <name>OpenDevClub</name>
+    <description>OpenDevClub project for Spring Boot</description>
 
     <!--管理所有的模块-->
     <modules>
@@ -19,6 +19,7 @@
         <module>opendev-persistence</module>
         <module>opendev-service</module>
         <module>opendev-webapi</module>
+        <module>opendev-manager</module>
     </modules>
 
     <parent>
@@ -33,6 +34,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <project.version>1.0-SNAPSHOT</project.version>
         <shiro.version>1.4.0</shiro.version>
         <shiro-redis.version>3.1.0</shiro-redis.version>
         <mybatis-version>2.1.0</mybatis-version>
@@ -44,7 +46,7 @@
         <lombok-version>1.18.8</lombok-version>
         <commons-net-version>3.6</commons-net-version>
         <gson.version>2.7</gson.version>
-        <swagger2.version>2.2.2</swagger2.version>
+        <swagger2.version>2.9.2</swagger2.version>
         <fastjson.version>1.2.39</fastjson.version>
     </properties>
 
@@ -72,7 +74,18 @@
             <!-- shiro spring. -->
             <dependency>
                 <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-spring</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <!-- shiro ehcache -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-ehcache</artifactId>
                 <version>${shiro.version}</version>
             </dependency>
 

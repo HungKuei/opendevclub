@@ -5,6 +5,7 @@ import com.opendev.enums.ResultStatusCode;
 import com.opendev.model.Role;
 import com.opendev.service.RoleService;
 import com.opendev.util.JsonResult;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ public class RoleController {
     private RoleService roleService;
 
     @GetMapping("/get/list")
+    @RequiresPermissions("roles:list")
     public APIResponse<Role> get(){
         List<Role> roles = roleService.getRoleAll();
         return JsonResult.success(ResultStatusCode.SUCCESS, roles);

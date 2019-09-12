@@ -12,6 +12,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="opendev-common" />
+        <module name="opendev-manager" />
         <module name="opendev-persistence" />
         <module name="opendev-service" />
         <module name="opendev-webapi" />

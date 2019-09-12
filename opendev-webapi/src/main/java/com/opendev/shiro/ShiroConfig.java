@@ -1,18 +1,18 @@
 package com.opendev.shiro;
 
+import com.opendev.filter.KickoutSessionControlFilter;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
-import org.apache.shiro.web.servlet.SimpleCookie;
 import org.crazycake.shiro.RedisCacheManager;
 import org.crazycake.shiro.RedisManager;
 import org.crazycake.shiro.RedisSessionDAO;
-import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 
 import javax.servlet.Filter;
 import java.util.LinkedHashMap;
@@ -30,45 +30,47 @@ public class ShiroConfig {
     @Value("${spring.redis.password}")
     private String redisPassword;
 
+    @Value("${spring.redis.timeout}")
+    private Integer timeout;
+
     @Bean
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager){
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //没有登陆的用户只能访问登陆页面，前后端分离中登录界面跳转应由前端路由控制，后台仅返回json数据
-        shiroFilterFactoryBean.setLoginUrl("/commom/unauth");
-        // 登录成功后要跳转的链接
-        //shiroFilterFactoryBean.setSuccessUrl("/auth/index");
-        // 未授权界面;
-        shiroFilterFactoryBean.setUnauthorizedUrl("common/unauth");
-
+        shiroFilterFactoryBean.setLoginUrl("/common/unauth");
         //自定义拦截器
-        Map<String, Filter> filtersMap = new LinkedHashMap<String, Filter>();
+        Map<String, Filter> filtersMap = new LinkedHashMap<>();
         //限制同一帐号同时在线的个数。
         filtersMap.put("kickout", kickoutSessionControlFilter());
         shiroFilterFactoryBean.setFilters(filtersMap);
-
-        // 权限控制map.
-        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
-        // 公共请求
+        //权限控制map.
+        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        //公共请求接口
         filterChainDefinitionMap.put("/common/**", "anon");
-        // 静态资源
-        filterChainDefinitionMap.put("/static/**", "anon");
-        // 登录方法
-        filterChainDefinitionMap.put("/login*", "anon"); // 表示可以匿名访问
+        //登录方法，表示可以匿名访问
+        filterChainDefinitionMap.put("/api/login/**", "anon");
+        //swagger接口权限 开放
+        filterChainDefinitionMap.put("/swagger-ui.html", "anon");
+        filterChainDefinitionMap.put("/swagger-resources", "anon");
+        filterChainDefinitionMap.put("/v2/api-docs", "anon");
+        filterChainDefinitionMap.put("/webjars/springfox-swagger-ui/**", "anon");
+        filterChainDefinitionMap.put("/configuration/security", "anon");
+        filterChainDefinitionMap.put("/configuration/ui", "anon");
 
         //此处需要添加一个kickout，上面添加的自定义拦截器才能生效
-        filterChainDefinitionMap.put("/admin/**", "authc,kickout");// 表示需要认证才可以访问
+        filterChainDefinitionMap.put("/**", "authc, kickout");// 表示需要认证才可以访问
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }
 
-    @Bean
-    public SecurityManager securityManager(ShiroRealm shiroRealm) {
+    @Bean(name = "securityManager")
+    public SecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         // 设置realm.
-        securityManager.setRealm(shiroRealm);
+        securityManager.setRealm(myShiroRealm());
         // 自定义缓存实现 使用redis
-        securityManager.setCacheManager(cacheManager());
+        securityManager.setCacheManager(redisCacheManager());
         // 自定义session管理 使用redis
         securityManager.setSessionManager(sessionManager());
         return securityManager;
@@ -96,15 +98,33 @@ public class ShiroConfig {
     }
 
     /**
+     * 配置shiro redisManager
+     * 使用的是shiro-redis开源插件
+     *
+     * @return
+     */
+    public RedisManager redisManager() {
+        RedisManager redisManager = new RedisManager();
+        redisManager.setHost(redisHost);
+        redisManager.setPort(redisPort);
+        //设置缓存过期时间
+        redisManager.setTimeout(timeout);
+        redisManager.setPassword(redisPassword);
+        return redisManager;
+    }
+
+    /**
      * cacheManager 缓存 redis实现
      * 使用的是shiro-redis开源插件
      *
      * @return
      */
-    public RedisCacheManager cacheManager() {
+    @Bean
+    public RedisCacheManager redisCacheManager() {
         RedisCacheManager redisCacheManager = new RedisCacheManager();
         redisCacheManager.setRedisManager(redisManager());
-        redisCacheManager.setKeyPrefix("OPENDEV_CACHE:");   //设置前缀
+        redisCacheManager.setPrincipalIdFieldName("userId");
+        redisCacheManager.setKeyPrefix("OPENDEV_CACHE:"); //设置前缀
         return redisCacheManager;
     }
 
@@ -125,34 +145,10 @@ public class ShiroConfig {
      * 使用的是shiro-redis开源插件
      */
     @Bean
-    public SessionManager sessionManager() {
-        SimpleCookie simpleCookie = new SimpleCookie("Token");
-        simpleCookie.setPath("/");
-        simpleCookie.setHttpOnly(false);
-
-        SessionManager sessionManager = new SessionManager();
+    public DefaultWebSessionManager sessionManager() {
+        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
         sessionManager.setSessionDAO(redisSessionDAO());
-        sessionManager.setSessionIdCookieEnabled(false);
-        sessionManager.setSessionIdUrlRewritingEnabled(false);
-        sessionManager.setDeleteInvalidSessions(true);
-        sessionManager.setSessionIdCookie(simpleCookie);
         return sessionManager;
-    }
-
-
-    /**
-     * 配置shiro redisManager
-     * 使用的是shiro-redis开源插件
-     *
-     * @return
-     */
-    public RedisManager redisManager() {
-        RedisManager redisManager = new RedisManager();
-        redisManager.setHost(redisHost);
-        redisManager.setPort(redisPort);
-        redisManager.setTimeout(1800); //设置过期时间
-        redisManager.setPassword(redisPassword);
-        return redisManager;
     }
 
     /**
@@ -161,9 +157,9 @@ public class ShiroConfig {
      * @return
      */
     @Bean
-    public SessionControlFilter kickoutSessionControlFilter() {
-        SessionControlFilter kickoutSessionControlFilter = new SessionControlFilter();
-        kickoutSessionControlFilter.setCache(cacheManager());
+    public KickoutSessionControlFilter kickoutSessionControlFilter() {
+        KickoutSessionControlFilter kickoutSessionControlFilter = new KickoutSessionControlFilter();
+        kickoutSessionControlFilter.setCache(redisCacheManager());
         kickoutSessionControlFilter.setSessionManager(sessionManager());
         kickoutSessionControlFilter.setKickoutAfter(false);
         kickoutSessionControlFilter.setMaxSession(1);
@@ -172,24 +168,9 @@ public class ShiroConfig {
     }
 
 
-    /***
-     * 授权所用配置
-     *
-     * @return
-     */
-    @Bean
-    public DefaultAdvisorAutoProxyCreator getDefaultAdvisorAutoProxyCreator() {
-        DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
-        defaultAdvisorAutoProxyCreator.setProxyTargetClass(true);
-        return defaultAdvisorAutoProxyCreator;
-    }
 
     /***
      * 使授权注解起作用不如不想配置可以在pom文件中加入
-     * <dependency>
-     *<groupId>org.springframework.boot</groupId>
-     *<artifactId>spring-boot-starter-aop</artifactId>
-     *</dependency>
      * @param securityManager
      * @return
      */
@@ -205,6 +186,7 @@ public class ShiroConfig {
      * 此方法需要用static作为修饰词，否则无法通过@Value()注解的方式获取配置文件的值
      *
      */
+
     @Bean
     public static LifecycleBeanPostProcessor getLifecycleBeanPostProcessor() {
         return new LifecycleBeanPostProcessor();

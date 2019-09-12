@@ -7,12 +7,14 @@ import com.opendev.model.User;
 import com.opendev.service.UserService;
 import com.opendev.util.JsonResult;
 import com.opendev.util.PageResult;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiresPermissions("users")
 @RequestMapping("api/users")
 public class UserController {
 
@@ -24,6 +26,7 @@ public class UserController {
      * @param userId
      * @return
      */
+    @RequiresPermissions("users:get")
     @GetMapping("/get/{userId}")
     public APIResponse<User> get(@PathVariable("userId") Integer userId){
         User user = userService.getUserByUserId(userId);
