@@ -6,7 +6,7 @@ import tk.mybatis.mapper.common.BaseMapper;
 
 import java.util.List;
 
-public interface PermissonMapper extends BaseMapper<Permission> {
+public interface PermissionMapper extends BaseMapper<Permission> {
 
     List<Permission> selectPermissionByRoleId(@Param("roleId") Integer roleId);
 }

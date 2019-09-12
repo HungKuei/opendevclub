@@ -12,7 +12,6 @@ import org.crazycake.shiro.RedisSessionDAO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 
 import javax.servlet.Filter;
 import java.util.LinkedHashMap;
@@ -46,18 +45,15 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setFilters(filtersMap);
         //权限控制map.
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        //swagger接口权限 开放
+        filterChainDefinitionMap.put("/swagger-ui.html", "anon");
+        filterChainDefinitionMap.put("/swagger-resources/**", "anon");
+        filterChainDefinitionMap.put("/v2/api-docs", "anon");
+        filterChainDefinitionMap.put("/webjars/springfox-swagger-ui/**", "anon");
         //公共请求接口
         filterChainDefinitionMap.put("/common/**", "anon");
         //登录方法，表示可以匿名访问
         filterChainDefinitionMap.put("/api/login/**", "anon");
-        //swagger接口权限 开放
-        filterChainDefinitionMap.put("/swagger-ui.html", "anon");
-        filterChainDefinitionMap.put("/swagger-resources", "anon");
-        filterChainDefinitionMap.put("/v2/api-docs", "anon");
-        filterChainDefinitionMap.put("/webjars/springfox-swagger-ui/**", "anon");
-        filterChainDefinitionMap.put("/configuration/security", "anon");
-        filterChainDefinitionMap.put("/configuration/ui", "anon");
-
         //此处需要添加一个kickout，上面添加的自定义拦截器才能生效
         filterChainDefinitionMap.put("/**", "authc, kickout");// 表示需要认证才可以访问
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
@@ -123,8 +119,8 @@ public class ShiroConfig {
     public RedisCacheManager redisCacheManager() {
         RedisCacheManager redisCacheManager = new RedisCacheManager();
         redisCacheManager.setRedisManager(redisManager());
-        redisCacheManager.setPrincipalIdFieldName("userId");
         redisCacheManager.setKeyPrefix("OPENDEV_CACHE:"); //设置前缀
+        redisCacheManager.setPrincipalIdFieldName("username");
         return redisCacheManager;
     }
 
@@ -141,12 +137,12 @@ public class ShiroConfig {
     }
 
     /**
-     * Session Manager
+     * 自定义SessionManager
      * 使用的是shiro-redis开源插件
      */
     @Bean
-    public DefaultWebSessionManager sessionManager() {
-        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
+    public SessionManager sessionManager() {
+        SessionManager sessionManager = new SessionManager();
         sessionManager.setSessionDAO(redisSessionDAO());
         return sessionManager;
     }

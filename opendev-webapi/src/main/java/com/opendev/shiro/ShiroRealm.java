@@ -3,7 +3,7 @@ package com.opendev.shiro;
 import com.opendev.model.Permission;
 import com.opendev.model.Role;
 import com.opendev.model.User;
-import com.opendev.service.PermissonService;
+import com.opendev.service.PermissionService;
 import com.opendev.service.RoleService;
 import com.opendev.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -28,7 +28,7 @@ public class ShiroRealm extends AuthorizingRealm {
     private RoleService roleService;
 
     @Autowired
-    private PermissonService permissonService;
+    private PermissionService permissionService;
 
     /**
      * 认证信息.(身份验证) : Authentication 是用来验证用户身份
@@ -72,7 +72,7 @@ public class ShiroRealm extends AuthorizingRealm {
                 if(CollectionUtils.isNotEmpty(roleList)){
                     for(Role role : roleList){
                         authorizationInfo.addRole(role.getRoleName());
-                        List<Permission> permissionList = permissonService.getPermissionByRoleId(role.getRoleId());
+                        List<Permission> permissionList = permissionService.getPermissionByRoleId(role.getRoleId());
                         if(CollectionUtils.isNotEmpty(permissionList)){
                             for (Permission permission : permissionList){
                                 if(StringUtils.isNoneBlank(permission.getPerms())){

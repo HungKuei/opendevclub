@@ -33,4 +33,11 @@ public class RoleServiceImpl implements RoleService {
     public boolean updateById(Role role) {
         return roleMapper.updateByPrimaryKeySelective(role) == 1;
     }
+
+    @Override
+    public boolean deleteById(Integer roleId) {
+        Role role = new Role();
+        role.setRoleId(roleId);
+        return roleMapper.deleteByPrimaryKey(role) == 1;
+    }
 }

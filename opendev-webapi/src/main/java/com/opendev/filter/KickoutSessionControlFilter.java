@@ -168,7 +168,7 @@ public class KickoutSessionControlFilter extends AccessControlFilter {
         return cache;
     }
 
-    public void setCache(CacheManager cacheManager) {
-        this.cache = cacheManager.getCache("shiro_redis_cache");
+    public void setCache(CacheManager cache) {
+        this.cache = cache.getCache("USER");
     }
 }

@@ -1,4 +1,4 @@
-# OpenDevClub（开源社区）
+# OpenDevClub（开源技术社区）
 
 #### 介绍
 

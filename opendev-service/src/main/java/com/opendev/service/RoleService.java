@@ -14,4 +14,5 @@ public interface RoleService {
 
     boolean updateById(Role role);
 
+    boolean deleteById(Integer roleId);
 }

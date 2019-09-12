@@ -7,15 +7,18 @@ import com.opendev.model.User;
 import com.opendev.service.UserService;
 import com.opendev.util.JsonResult;
 import com.opendev.util.PageResult;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequiresPermissions("users")
+
+@Api(value = "UserController", description = "用户管理接口")
 @RequestMapping("api/users")
+@RestController
 public class UserController {
 
     @Autowired
@@ -26,6 +29,7 @@ public class UserController {
      * @param userId
      * @return
      */
+    @ApiOperation(value = "根据用户ID查询接口")
     @RequiresPermissions("users:get")
     @GetMapping("/get/{userId}")
     public APIResponse<User> get(@PathVariable("userId") Integer userId){
@@ -39,6 +43,8 @@ public class UserController {
      * @param rows
      * @return
      */
+    @ApiOperation(value = "用户列表--分页查询")
+    @RequiresPermissions("users:list")
     @GetMapping("/get/{page}/{rows}")
     public PageResult<User> get(@PathVariable("page") Integer page, @PathVariable("rows") Integer rows){
         List<User> users = userService.getUsersByPages(page, rows);
@@ -50,6 +56,8 @@ public class UserController {
      * @param user
      * @return
      */
+    @ApiOperation(value = "用户列表--添加用户")
+    @RequiresPermissions("users:add")
     @PostMapping("/add")
     public APIResponse add(@RequestBody User user){
         if (userService.addUser(user)){
@@ -64,6 +72,8 @@ public class UserController {
      * @param user
      * @return
      */
+    @ApiOperation(value = "用户列表--更新用户信息")
+    @RequiresPermissions("users:update")
     @PutMapping("/update")
     public APIResponse update(@RequestBody User user){
         if (userService.updateByUserId(user)){
@@ -78,6 +88,8 @@ public class UserController {
      * @param userId
      * @return
      */
+    @ApiOperation(value = "用户列表--实现逻辑删除")
+    @RequiresPermissions("users:delete")
     @DeleteMapping("/del/{userId}")
     public APIResponse delete(@PathVariable("userId") Integer userId){
         if (userId == null){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.opendev.mapper.PermissonMapper">
+<mapper namespace="com.opendev.mapper.PermissionMapper">
 
     <sql id="Base_column_list">
         perm_id, parent_id, menu_name, perm_desc, menu_type, menu_icon, perm_url, perms, sort_num, status, create_time, update_time

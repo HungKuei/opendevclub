@@ -4,6 +4,7 @@ import com.opendev.base.APIResponse;
 import com.opendev.enums.ResultStatusCode;
 import com.opendev.model.User;
 import com.opendev.util.JsonResult;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -13,6 +14,7 @@ import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.cache.Cache;
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.subject.Subject;
 import org.crazycake.shiro.RedisCacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +30,10 @@ import java.util.Deque;
 /**
  * 登录接口层
  */
-@RestController
+
+@Api(value = "LoginController", description = "登录接口")
 @RequestMapping("/api")
+@RestController
 public class LoginController {
 
     @Autowired
@@ -72,12 +76,14 @@ public class LoginController {
         if (subject != null){
             String username = ((User) SecurityUtils.getSubject().getPrincipal()).getUsername();
             Serializable sessionId = SecurityUtils.getSubject().getSession().getId();
-            Cache<Serializable, Deque<Serializable>> cache = redisCacheManager.getCache(redisCacheManager.getKeyPrefix()+username);
+            Cache<Serializable, Deque<Serializable>> cache = redisCacheManager.getCache("USER");
             Deque<Serializable> deques = cache.get(username);
-            for (Serializable deque : deques){
-                if (sessionId.equals(deque)){
-                    deques.remove(deque);
-                    break;
+            if (!deques.isEmpty()){
+                for (Serializable deque : deques){
+                    if (sessionId.equals(deque)){
+                        deques.remove(deque);
+                        break;
+                    }
                 }
             }
             cache.put(username, deques);

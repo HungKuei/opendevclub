@@ -7,3 +7,4 @@ com\opendev\model\UserRole.class
 com\opendev\mapper\UserMapper.class
 com\opendev\model\User.class
 com\opendev\model\RolePermission.class
+com\opendev\mapper\PermissonMapper.class
