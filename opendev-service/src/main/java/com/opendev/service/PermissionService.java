@@ -10,4 +10,5 @@ public interface PermissionService {
 
     List<Permission> getPermsList();
 
+    boolean addPermission(Permission permission);
 }

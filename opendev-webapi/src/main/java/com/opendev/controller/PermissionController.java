@@ -9,9 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,9 +27,21 @@ public class PermissionController {
     @ApiOperation(value = "权限列表查询")
     @RequiresPermissions("perms:list")
     @GetMapping("/list")
-    private APIResponse get(){
+    public APIResponse get(){
         List<Permission> permissions = permissionService.getPermsList();
         return JsonResult.success(ResultStatusCode.SUCCESS, permissions);
+    }
+
+
+    @ApiOperation(value = "新增权限")
+    @RequiresPermissions("perms:add")
+    @PostMapping("/add")
+    public APIResponse add(@RequestBody Permission permission){
+        if (permissionService.addPermission(permission)){
+            return JsonResult.success(ResultStatusCode.SUCCESS, permission);
+        }else{
+            return JsonResult.error();
+        }
     }
 
 }

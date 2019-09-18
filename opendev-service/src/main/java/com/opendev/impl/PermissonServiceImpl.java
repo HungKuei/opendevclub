@@ -23,4 +23,9 @@ public class PermissonServiceImpl implements PermissionService {
     public List<Permission> getPermsList() {
         return permissionMapper.selectAll();
     }
+
+    @Override
+    public boolean addPermission(Permission permission) {
+        return permissionMapper.insertSelective(permission) == 1;
+    }
 }
