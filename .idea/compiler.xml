@@ -11,16 +11,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="opendev-api-pay" />
+        <module name="opendev-api-user" />
         <module name="opendev-common" />
-        <module name="opendev-manager" />
-        <module name="opendev-persistence" />
-        <module name="opendev-service" />
-        <module name="opendev-webapi" />
+        <module name="opendev-eureka-server" />
+        <module name="opendev-message" />
+        <module name="opendev-pay" />
+        <module name="opendev-pc-web" />
+        <module name="opendev-user" />
+        <module name="opendev-weixin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="opendev-manager" target="1.8" />
       <module name="opendev-permisson" target="1.8" />
+      <module name="opendev-persistence" target="1.8" />
+      <module name="opendev-service" target="1.8" />
       <module name="opendev-web" target="1.8" />
+      <module name="opendev-webapi" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

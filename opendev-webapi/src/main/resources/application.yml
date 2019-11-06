@@ -1,4 +1,0 @@
-## 激活开发环境下配置文件
-spring:
-  profiles:
-    active: dev

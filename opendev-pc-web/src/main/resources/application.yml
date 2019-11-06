@@ -1,0 +1,24 @@
+server:
+  port: 8003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9001/eureka/
+spring:
+  application:
+    name: pc-web-server
+  #redis连接信息
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
+  thymeleaf:
+    cache: false
+    mode: HTML5

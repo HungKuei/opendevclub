@@ -1,0 +1,32 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /message
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9001/eureka/
+spring:
+  application:
+    name: message-server
+  activemq:
+    broker-url: tcp://192.168.93.128:61616
+    in-memory: true
+    pool:
+      enabled: false
+  mail:
+    host: smtp.163.com
+    username: hungkuei@163.com
+    password: hungkuei163
+    enable:  true
+    smtp:
+      auth: true
+    starttls:
+      enable: true
+      required: true
+
+########################################
+
+msg:
+  subject: OpenDevClub社区提示您，会员注册成功。
+  text:  恭喜您的账户{},注册成功! OpenDevClub社区 www.github.com/HungKuei/opendevclub.git
