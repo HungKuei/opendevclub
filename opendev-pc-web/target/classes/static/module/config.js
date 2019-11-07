@@ -1,3 +1,97 @@
-/** EasyWeb spa v3.0.8 data:2019-03-24 License By http://easyweb.vip */
+layui.define(function (exports) {
 
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('4.E(1(a){3 b={W:"/11/",8:"T-U",V:r,Z:g,13:x,A:"B",C:".F",I:"K-n",o:1(){3 c=4.9(b.8);7(c){5 c.i}},w:1(){4.9(b.8,{k:"i",y:g})},z:1(c){4.9(b.8,{k:"i",h:c})},s:1(){3 c=4.9(b.8);7(c){5 c.t}},D:1(c){4.9(b.8,{k:"t",h:c})},1e:1(){3 e=b.s().G;3 c=[];H(3 d=0;d<e.J;d++){c.p(e[d].L)}5 c},M:1(){3 d=[];3 c=b.o();7(c){d.p({N:"O",h:"P "+c})}5 d},Q:1(c){7(c.j==S){b.w();f.l("登录过期",{m:2,X:Y},1(){u.10()});5 r}v{7(c.j==12){f.l("没有访问权限",{m:2})}v{7(c.j==q){f.l("q目标不存在",{m:2})}}}5 g},14:1(c){f.15("路由"+u.16+"不存在",{17:"提示",18:"4-f-n",19:[],1a:"1b",1c:6,1d:g})}};a("R",b)});',62,77,'|function||var|layui|return||if|tableName|data||||||layer|true|value|token|code|key|msg|icon|admin|getToken|push|404|false|getUser|login_user|location|else|removeToken|20|remove|putToken|viewPath|components|viewSuffix|putUser|define|html|authorities|for|defaultTheme|length|theme|authority|getAjaxHeaders|name|Authorization|Bearer|ajaxSuccessBefore|config|401|easyweb|jwt|pageTabs|base_server|time|1500|openTabCtxMenu|reload|v1|403|maxTabNum|routerNotFound|alert|hash|title|skin|btn|offset|30px|anim|shadeClose|getUserAuths'.split('|'),0,{}))
+    var config = {
+        base_server: '/', // 接口地址，实际项目请换成http形式的地址
+        tableName: 'easyweb',  // 存储表名
+        autoRender: false,  // 窗口大小改变后是否自动重新渲染表格，解决layui数据表格非响应式的问题，目前实现的还不是很好，暂时关闭该功能
+        pageTabs: true,   // 是否开启多标签
+        // 获取缓存的token
+        getToken: function () {
+            var t = layui.data(config.tableName).token;
+            if (t) {
+                return JSON.parse(t);
+            }
+        },
+        // 清除user
+        removeToken: function () {
+            layui.data(config.tableName, {
+                key: 'token',
+                remove: true
+            });
+        },
+        // 缓存token
+        putToken: function (token) {
+            layui.data(config.tableName, {
+                key: 'token',
+                value: JSON.stringify(token)
+            });
+        },
+        // 导航菜单，最多支持三级，因为还有判断权限，所以渲染左侧菜单很复杂，无法做到递归，你需要更多极请联系我添加，添加可以无限添加，只是无法做到递归
+        menus: [{
+            name: '主页',
+            url: 'javascript:;',
+            icon: 'layui-icon-home',
+            subMenus: [{
+                name: '主页一',
+                url: '#!console',
+                path: 'console.html'
+            }]
+        }, {
+            name: '系统管理',
+            icon: 'layui-icon-set',
+            url: 'javascript:;',
+            subMenus: [{
+                name: '用户管理',
+                url: '#!user',  // 这里url不能带斜杠，因为是用递归循环进行关键字注册，带斜杠会被q.js理解为其他注册模式
+                path: 'system/user.html',
+                auth: 'post:/user/query'
+            }, {
+                name: '角色管理',
+                url: '#!role',
+                path: 'system/role.html',
+                auth: 'get:/role'
+            }, {
+                name: '权限管理',
+                url: '#!authorities',
+                path: 'system/authorities.html',
+                auth: 'get:/authorities'
+            }, {
+                name: '登录日志',
+                url: '#!login_record',
+                path: 'system/login_record.html',
+                auth: 'get:/loginRecord'
+            }]
+        }, {
+            name: '多级菜单',
+            url: 'javascript:;',
+            icon: 'layui-icon-unlink',
+            subMenus: [{
+                name: '二级菜单',
+                url: 'javascript:;',
+                subMenus: [{
+                    name: '三级菜单',
+                    url: 'javascript:;'
+                }]
+            }]
+        }, {
+            name: '一级菜单',
+            url: 'javascript:;',
+            icon: 'layui-icon-unlink'
+        }],
+        // 当前登录的用户
+        getUser: function () {
+            var u = layui.data(config.tableName).login_user;
+            if (u) {
+                return JSON.parse(u);
+            }
+        },
+        // 缓存user
+        putUser: function (user) {
+            layui.data(config.tableName, {
+                key: 'login_user',
+                value: JSON.stringify(user)
+            });
+        }
+    };
+    exports('config', config);
+});

@@ -31,7 +31,7 @@ public class PaymentInfo {
     /**
      * 支付状态 0 待支付、1支付成功 、2支付失败
      */
-    private Integer status;
+    private Integer state;
     /**
      * 支付报文
      */

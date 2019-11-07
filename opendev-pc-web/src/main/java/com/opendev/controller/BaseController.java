@@ -17,6 +17,26 @@ public class BaseController extends BaseService {
     private UserServiceFeign userServiceFeign;
 
     /**
+     * 获取当前登录用户信息
+     * @param request
+     * @return
+     */
+    public User getCurrentUserInfo(HttpServletRequest request){
+        String token = getToken(request);
+        if (token == null){
+            return null;
+        }
+        // 用token换取userId
+        String userId = (String) baseRedisService.getString(token);
+        if (StringUtils.isEmpty(userId)){
+            return null;
+        }
+        BaseResponse<User> response = userServiceFeign.getByUserId(Integer.valueOf(userId));
+        User user = response.getData();
+        return user;
+    }
+
+    /**
      * 是否认证
      * @param request
      * @return

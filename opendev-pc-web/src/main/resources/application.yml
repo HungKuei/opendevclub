@@ -1,10 +1,10 @@
 server:
-  port: 8003
+  port: 80
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:9001/eureka/
+      defaultZone: http://192.168.93.128:9001/eureka/
 spring:
   application:
     name: pc-web-server
@@ -22,3 +22,7 @@ spring:
   thymeleaf:
     cache: false
     mode: HTML5
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html

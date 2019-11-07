@@ -1,24 +1,26 @@
 server:
   port: 8002
 
+##eureka注册中心相关配置
 eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+    ###发呆时间，即服务续约到期时间（缺省为90秒，生产使用缺省时间，测试环境修改小点）
+    lease-expiration-duration-in-seconds: 10
+    ###心跳时间，生产使用缺省时间，即服务续约间隔时间（缺省为30秒，生产使用缺省时间，测试环境修改小点）
+    lease-renewal-interval-in-seconds: 10
   client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:9001/eureka/
+    ###默认为30s 生产使用缺省时间，测试环境修改小点
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://192.168.93.128:9001/eureka/
+
+##Spring相关配置
 spring:
   application:
     name: pay-server
-  #redis连接信息
-  redis:
-    host: 127.0.0.1
-    password: 123456
-    port: 6379
-    jedis:
-      pool:
-        max-idle: 100
-        min-idle: 1
-        max-active: 1000
-        max-wait: -1
   #数据库连接信息
   datasource:
     name: test
@@ -41,6 +43,17 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+  #redis连接信息
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss

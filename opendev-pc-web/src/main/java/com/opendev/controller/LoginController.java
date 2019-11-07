@@ -70,14 +70,13 @@ public class LoginController extends BaseController {
         CookieUtil.addCookie(response, PublicConstant.COOKIE_TOKEN, access_token, PublicConstant.COOKIE_TIMEOUT);
     }
 
-    @PostMapping("logout")
-    @ResponseBody
-    public BaseResponse logout(HttpServletRequest request){
+    @GetMapping("logout")
+    public String logout(HttpServletRequest request){
         if (!isAuthentication(request)){
-            return success("登录超时，请重新登录");
+            return REDIRECT_INDEX;
         }
         String token = getToken(request);
         baseRedisService.delKey(token);
-        return success("退出成功");
+        return REDIRECT_INDEX;
     }
 }

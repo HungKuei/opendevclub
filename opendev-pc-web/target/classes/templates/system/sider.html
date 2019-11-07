@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="sider" class="layui-side-scroll">
+    <ul class="layui-nav layui-nav-tree" style="margin-top: 15px;">
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;"><i class="layui-icon layui-icon-home"></i>&emsp;<cite>主页</cite></a>
+            <dl class="layui-nav-child">
+                <dd class="layui-this">
+                    <a lay-href="console">控制台</a>
+                </dd>
+            </dl>
+        </li>
+        <!--<script id="sideNav" type="text/html">
+            {{#  layui.each(d, function(index, item){ }}
+            {{# if(!item.hidden){ }}
+            <li class="layui-nav-item">
+                <a href="{{item.url}}"><i class="layui-icon {{item.icon}}"></i>&emsp;<cite>{{ item.name }}</cite></a>
+                {{# if(item.subMenus&&item.subMenus.length>0){ }}
+                <dl class="layui-nav-child">
+                    {{# layui.each(item.subMenus, function(index, subItem){ }}
+                    {{# if(!subItem.hidden){ }}
+                    <dd>
+                        <a href="{{ subItem.url }}">{{ subItem.name }}</a>
+
+                        {{# if(subItem.subMenus&&subItem.subMenus.length>0){ }}
+                        <dl class="layui-nav-child">
+                            {{# layui.each(subItem.subMenus, function(index, thrItem){ }}
+                            {{# if(!thrItem.hidden){ }}
+                            <dd>
+                                <a href="{{ thrItem.url }}">{{ thrItem.name }}</a>
+                            </dd>
+                            {{# } }}
+                            {{# }); }}
+                        </dl>
+                        {{# } }}
+                    </dd>
+                    {{# } }}
+                    {{# }); }}
+                </dl>
+                {{# } }}
+            </li>
+            {{# } }}
+            {{#  }); }}
+        </script>-->
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-senior"></i>&emsp;<cite>系统监控</cite></a>
+            <dl class="layui-nav-child">
+                <dd><a lay-href="iframe?url=druid">Druid监控</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-unlink"></i>&emsp;<cite>多级菜单</cite></a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a href="javascript:;">二级菜单</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="iframe?url=druid">三级菜单</a></dd>
+                        <dd><a href="iframe?url=druid">三级菜单</a></dd>
+                    </dl>
+                </dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="iframe?url=druid"><i class="layui-icon layui-icon-unlink"></i>&emsp;<cite>一级菜单</cite></a>
+        </li>
+    </ul>
+</div>

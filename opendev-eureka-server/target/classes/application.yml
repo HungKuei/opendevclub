@@ -7,18 +7,11 @@ eureka:
   instance:
     ###注册到eurekaip地址
     hostname: 127.0.0.1
-    prefer-ip-address: true
   client:
     ###表示是否注册自身到eureka服务器， 做集群是设置成true 生产配置为true
     register-with-eureka: false
     ###表示是否从eureka服务器获得注册信息，生产配置为true
     fetch-registry: false
-    ###默认为30s 生产使用缺省时间，测试环境修改小点
-    registry-fetch-interval-seconds: 5
-    ###心跳时间，生产使用缺省时间，即服务续约间隔时间（缺省为30秒，生产使用缺省时间，测试环境修改小点）
-    lease-renewal-interval-in-seconds: 5
-    ###发呆时间，即服务续约到期时间（缺省为90秒，生产使用缺省时间，测试环境修改小点）
-    lease-expiration-duration-in-seconds: 10
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:

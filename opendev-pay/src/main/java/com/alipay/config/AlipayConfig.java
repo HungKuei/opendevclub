@@ -28,10 +28,10 @@ public class AlipayConfig {
 	public static String alipay_public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo8jtP8x70P1vcsfPWv4YsNlLHPZaafYZUv4Z2T2jjc4szsQJA1O3XNuJwmsvyEhLeEENaHoZkGqdMht3Al2MD89JJLNZBljymdbqyXXoGdThBYrUcpyvi1HvgieVVuOHoIECUoQZpCaz6jBcn1uoECDJxUoU45Au749MP7OrFU3rl8eOoYrAgqZG1Wh2uoxnhPqasij/oi1ZBbdxY0KDRYuhuGu4FqXNjcJ0Vx1hsmk6kM7AK6xc4W2ZxSyVrrTgAdyO5CrkFhUR1Hw/mSCJjOz1JPR5xnVUZskNOpoGHD7XN+Da25rUadcQNqc2T6/ES95O1gaQUnLcXqdTIdVyCQIDAQAB";
 
 	// 服务器异步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-	public static String notify_url = "http://openpay.free.idcfengye.com/pay/norok?username=hungkuei";
+	public static String notify_url = "http://openpay.free.idcfengye.com/back/asynNotify";
 
 	// 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-	public static String return_url = "http://openpay.free.idcfengye.com/pay/norok?username=hungkuei";
+	public static String return_url = "http://openpay.free.idcfengye.com/back/synNotify";
 
 	// 签名方式
 	public static String sign_type = "RSA2";
