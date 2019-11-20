@@ -4,8 +4,10 @@ import com.opendev.base.BaseResponse;
 import com.opendev.model.PaymentInfo;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RequestMapping("/pay")
-public interface PayService {
+public interface PaymentService {
 
     /**
      * 创建支付令牌
@@ -23,6 +25,20 @@ public interface PayService {
     @GetMapping("/getPayToken")
     BaseResponse getPayToken(@RequestParam("payToken") String payToken);
 
-    @RequestMapping("/norok")
-    BaseResponse testNork(@RequestParam("username") String username);
+    /**
+     * 同步通知 获取支付宝GET过来反馈信息
+     * @param params
+     * @return
+     */
+    @GetMapping("/back/synNotify")
+    BaseResponse synNotify(@RequestParam Map<String, String> params);
+
+    /**
+     * 异步通知 获取支付宝POST过来反馈信息
+     * @param params
+     * @return
+     */
+    @PostMapping("/back/asynNotify")
+    BaseResponse asynNotify(@RequestParam Map<String, String> params);
+
 }

@@ -38,7 +38,6 @@ public class IndexController extends BaseController {
         return MESSAGE;
     }
 
-
     /*主题*/
     @GetMapping("/theme")
     public String theme(){

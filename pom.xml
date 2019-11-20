@@ -23,6 +23,7 @@
         <module>opendev-pc-web</module>
         <module>opendev-weixin</module>
         <module>opendev-pay</module>
+        <module>opendev-zuul-gateway</module>
     </modules>
 
     <parent>

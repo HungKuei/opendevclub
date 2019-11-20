@@ -1,0 +1,25 @@
+server:
+  port: 80
+
+###eureka服务注册地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.93.128:9001/eureka/
+spring:
+  application:
+    name: zuul-gateway-server
+
+zuul:
+  routes:
+    ###服务接口
+    api-user:
+      path: /user/**
+      serviceId: user-server
+    api-weixin:
+      path: /weixin/**
+      serviceId: weixin-server
+
+
+
+

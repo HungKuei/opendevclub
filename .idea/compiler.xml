@@ -20,6 +20,7 @@
         <module name="opendev-pc-web" />
         <module name="opendev-user" />
         <module name="opendev-weixin" />
+        <module name="opendev-zuul-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
