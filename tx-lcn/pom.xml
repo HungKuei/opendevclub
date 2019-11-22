@@ -35,7 +35,7 @@
         <maven.javadoc.plugin>2.10.3</maven.javadoc.plugin>
         <maven.gpg.plugin>1.6</maven.gpg.plugin>
 
-        <io.netty.version>4.1.31.Final</io.netty.version>
+        <io.netty.version>4.1.42.Final</io.netty.version>
         <guava.version>19.0</guava.version>
         <hessian.version>4.0.63</hessian.version>
         <protostuff.version>1.6.0</protostuff.version>
