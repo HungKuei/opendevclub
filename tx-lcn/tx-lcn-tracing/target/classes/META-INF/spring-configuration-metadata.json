@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "tx-lcn.ribbon.loadbalancer.dtx",
+      "type": "com.codingapi.txlcn.tracing.http.ribbon.DTXLoadbalancer",
+      "sourceType": "com.codingapi.txlcn.tracing.http.ribbon.DTXLoadbalancer"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tx-lcn.ribbon.loadbalancer.dtx.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.codingapi.txlcn.tracing.http.ribbon.DTXLoadbalancer",
+      "defaultValue": false
+    }
+  ],
+  "hints": []
+}

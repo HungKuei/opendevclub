@@ -79,4 +79,14 @@ public interface PublicConstant {
      * 支付令牌过期时间(15z分钟)
      */
     Long PAY_TOKEN_TIMEOUT = (long) 60*15;
+
+    /**
+     * 支付成功
+     */
+    String PAY_SUCCESS = "success";
+
+    /**
+     * // 支付失败
+     */
+    String PAY_FAIL = "fail";
 }

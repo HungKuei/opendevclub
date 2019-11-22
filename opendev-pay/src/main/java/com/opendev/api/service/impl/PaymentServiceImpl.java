@@ -7,6 +7,7 @@ import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.alipay.config.AlipayConfig;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.opendev.api.service.PaymentService;
 import com.opendev.base.BaseResponse;
 import com.opendev.base.BaseService;
@@ -16,6 +17,7 @@ import com.opendev.model.PaymentInfo;
 import com.opendev.utils.TokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -149,7 +151,9 @@ public class PaymentServiceImpl extends BaseService implements PaymentService {
     }
 
     @Override
-    public BaseResponse asynNotify(@RequestParam Map<String, String> params) {
+    @LcnTransaction //分布式事务注解
+    @Transactional  //本地事务注解
+    public String asynNotify(@RequestParam Map<String, String> params) {
         // 日志记录
         log.info(">>>>>>>>>>>>>>>>支付宝异步通知开始，params:{}", params);
         // 验签
@@ -157,25 +161,25 @@ public class PaymentServiceImpl extends BaseService implements PaymentService {
             // 调用SDK验证签名
             boolean signVerified = AlipaySignature.rsaCheckV1(params, AlipayConfig.alipay_public_key, AlipayConfig.charset, AlipayConfig.sign_type);
             if (!signVerified){
-                return error("验签失败");
+                return PublicConstant.PAY_FAIL;
             }
             // 去除商户订单号
             String outTradeNo = params.get("out_trade_no");
             PaymentInfo paymentInfo = paymentMapper.selectByPayId(outTradeNo);
             if (paymentInfo == null){
-                return error("支付失败");
+                return PublicConstant.PAY_FAIL;
             }
             // 支付宝重试机制
             Integer state = paymentInfo.getState();
             if (state == 1){
-                return success("支付成功");
+                return PublicConstant.PAY_SUCCESS;
             }
             // 交易金额
             String totalAmount = params.get("total_amount");
             // 判断实际付款金额与商品金额是否一致
             String price = String.valueOf(paymentInfo.getPrice());
             if (!price.equals(totalAmount)){
-                return error("支付异常");
+                return PublicConstant.PAY_FAIL;
             }
             // 支付宝交易号
             String tradeNo = params.get("trade_no");
@@ -186,18 +190,18 @@ public class PaymentServiceImpl extends BaseService implements PaymentService {
             // 手动 begin begin
             Integer update = paymentMapper.updateByPrimaryKeySelective(paymentInfo);
             if (update != 1) {
-                return error("支付失败");
+                return PublicConstant.PAY_FAIL;
             }
             // 调用订单接口通知 支付状态
             //
             //
             // #######################
 
-            return success("支付成功");
+            return PublicConstant.PAY_SUCCESS;
         } catch (AlipayApiException e) {
             log.error("-------->支付宝异步通知出现异常,ERROR:", e);
             // 回滚 手动回滚
-            return error("支付失败");
+            return PublicConstant.PAY_FAIL;
         }finally {
             log.info("<<<<<<<<<<<<<<<<<支付宝异步通知结束,params:{}", params);
         }

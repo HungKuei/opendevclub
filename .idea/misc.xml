@@ -19,6 +19,9 @@
         <option value="$PROJECT_DIR$/opendev-service/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-web/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-webapi/pom.xml" />
+        <option value="$PROJECT_DIR$/tx-lcn/tx-lcn-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/tx-lcn/tx-lcn-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/tx-lcn/tx-lcn-tc/pom.xml" />
       </set>
     </option>
   </component>

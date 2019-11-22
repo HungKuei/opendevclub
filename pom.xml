@@ -24,6 +24,7 @@
         <module>opendev-weixin</module>
         <module>opendev-pay</module>
         <module>opendev-zuul-gateway</module>
+        <module>tx-lcn</module>
     </modules>
 
     <parent>
@@ -91,32 +92,6 @@
             <version>${druid-version}</version>
         </dependency>
 
-        <!-- shiro spring. -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-core</artifactId>
-            <version>${shiro.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>${shiro.version}</version>
-        </dependency>
-
-        <!-- shiro ehcache -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-ehcache</artifactId>
-            <version>${shiro.version}</version>
-        </dependency>
-
-        <!-- shiro+redis缓存插件 -->
-        <dependency>
-            <groupId>org.crazycake</groupId>
-            <artifactId>shiro-redis</artifactId>
-            <version>${shiro-redis.version}</version>
-        </dependency>
-
         <!--mysql数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
@@ -153,17 +128,6 @@
             <version>${commons-net-version}</version>
         </dependency>
 
-        <!-- swagger start -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger2.version}</version>
-        </dependency>
         <!-- httpclient -->
         <dependency>
             <groupId>commons-httpclient</groupId>

@@ -1,6 +1,7 @@
 package com.opendev.api.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.opendev.api.service.UserService;
 import com.opendev.base.BaseResponse;
 import com.opendev.base.BaseService;
@@ -16,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -46,6 +48,8 @@ public class UserServiceImpl extends BaseService implements UserService {
     }
 
     @Override
+    @LcnTransaction //分布式事务注解
+    @Transactional  //本地事务注解
     public BaseResponse addUser(@RequestBody User user) {
         if (StringUtils.isEmpty(user.getUsername())){
             return error("用户名不能为空");

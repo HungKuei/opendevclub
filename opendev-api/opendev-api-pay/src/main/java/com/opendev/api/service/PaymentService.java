@@ -39,6 +39,6 @@ public interface PaymentService {
      * @return
      */
     @PostMapping("/back/asynNotify")
-    BaseResponse asynNotify(@RequestParam Map<String, String> params);
+    String asynNotify(@RequestParam Map<String, String> params);
 
 }

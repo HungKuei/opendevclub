@@ -1,0 +1,88 @@
+{
+  "groups": [
+    {
+      "name": "tx-lcn.manager",
+      "type": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tx-lcn.manager.admin-key",
+      "type": "java.lang.String",
+      "description": "后台密码",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": "codingapi"
+    },
+    {
+      "name": "tx-lcn.manager.concurrent-level",
+      "type": "java.lang.Integer",
+      "description": "事务处理并发等级",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.manager.dtx-lock-time",
+      "type": "java.lang.Long",
+      "description": "分布式事务锁超时时间",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": -1
+    },
+    {
+      "name": "tx-lcn.manager.dtx-time",
+      "type": "java.lang.Long",
+      "description": "分布式事务超时时间(ms)",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.manager.ex-url",
+      "type": "java.lang.String",
+      "description": "异常回调地址",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": "\/provider\/email-to\/ujued@qq.com"
+    },
+    {
+      "name": "tx-lcn.manager.ex-url-enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否允许异常回调",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": true
+    },
+    {
+      "name": "tx-lcn.manager.heart-time",
+      "type": "java.lang.Long",
+      "description": "netty heart check time (ms)",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.manager.host",
+      "type": "java.lang.String",
+      "description": "manager host",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": "127.0.0.1"
+    },
+    {
+      "name": "tx-lcn.manager.machine-id",
+      "type": "java.lang.Long",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.manager.port",
+      "type": "java.lang.Integer",
+      "description": "support  port",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.manager.seq-len",
+      "type": "java.lang.Integer",
+      "description": "ID序列长度",
+      "sourceType": "com.codingapi.txlcn.tm.config.TxManagerConfig",
+      "defaultValue": 12
+    }
+  ],
+  "hints": []
+}

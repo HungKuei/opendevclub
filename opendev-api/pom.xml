@@ -11,6 +11,7 @@
 
     <artifactId>opendev-api</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>opendev-api-user</module>
         <module>opendev-api-pay</module>
@@ -23,5 +24,4 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 </project>

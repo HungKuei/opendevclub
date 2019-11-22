@@ -96,7 +96,7 @@ public class PayController {
      */
     @PostMapping("/back/asynNotify")
     @ResponseBody
-    public BaseResponse asynCallBack(HttpServletRequest request) throws IOException {
+    public String asynCallBack(HttpServletRequest request) throws IOException {
         //获取支付宝POST过来反馈信息
         Map<String,String[]> requestParams = request.getParameterMap();
         Map<String, String> params = getParams(requestParams);

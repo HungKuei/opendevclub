@@ -60,5 +60,10 @@ mybatis:
   type-aliases-package: com.opendev.model
   mapper-locations: classpath:mapper/*Mapper.xml
 
+# 默认之配置为TM的本机默认端口
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:8070
+
 
 

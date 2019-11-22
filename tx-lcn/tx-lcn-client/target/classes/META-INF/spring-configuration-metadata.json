@@ -1,0 +1,81 @@
+{
+  "groups": [
+    {
+      "name": "tx-lcn.aspect.log",
+      "type": "com.codingapi.txlcn.tc.corelog.H2DbProperties",
+      "sourceType": "com.codingapi.txlcn.tc.corelog.H2DbProperties"
+    },
+    {
+      "name": "tx-lcn.client",
+      "type": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tx-lcn.aspect.log.file-path",
+      "type": "java.lang.String",
+      "sourceType": "com.codingapi.txlcn.tc.corelog.H2DbProperties"
+    },
+    {
+      "name": "tx-lcn.client.chain-level",
+      "type": "java.lang.Integer",
+      "description": "调用链长度等级",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 3
+    },
+    {
+      "name": "tx-lcn.client.dtx-aspect-order",
+      "type": "java.lang.Integer",
+      "description": "aspect order",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig"
+    },
+    {
+      "name": "tx-lcn.client.dtx-time",
+      "type": "java.lang.Long",
+      "description": "Distributed Transaction Time",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.client.machine-id",
+      "type": "java.lang.Long",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.client.manager-address",
+      "type": "java.util.List<java.lang.String>",
+      "description": "manager hosts",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig"
+    },
+    {
+      "name": "tx-lcn.client.resource-order",
+      "type": "java.lang.Integer",
+      "description": "aspect connection order",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.client.tm-rpc-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.client.tx-manager-delay",
+      "type": "java.lang.Integer",
+      "description": "txManager max delay time (s)",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 0
+    },
+    {
+      "name": "tx-lcn.client.tx-manager-heart",
+      "type": "java.lang.Integer",
+      "description": "txManager check heart time (s)",
+      "sourceType": "com.codingapi.txlcn.tc.config.TxClientConfig",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}

@@ -21,6 +21,13 @@
         <module name="opendev-user" />
         <module name="opendev-weixin" />
         <module name="opendev-zuul-gateway" />
+        <module name="tx-lcn-client" />
+        <module name="tx-lcn-common" />
+        <module name="tx-lcn-logger" />
+        <module name="tx-lcn-server" />
+        <module name="tx-lcn-tracing" />
+        <module name="tx-lcn-txmsg" />
+        <module name="tx-lcn-txmsg-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +37,10 @@
       <module name="opendev-service" target="1.8" />
       <module name="opendev-web" target="1.8" />
       <module name="opendev-webapi" target="1.8" />
+      <module name="tx-lcn-admin" target="1.8" />
+      <module name="tx-lcn-manager" target="1.8" />
+      <module name="tx-lcn-tc" target="1.8" />
+      <module name="txlcn-manager" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
