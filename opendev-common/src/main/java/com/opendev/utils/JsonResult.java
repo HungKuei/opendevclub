@@ -55,12 +55,12 @@ public class JsonResult {
      * @param result
      * @return
      */
-    public static BaseResponse<Object> error(Integer code, String msg, Object result){
+    public static BaseResponse error(Integer code, String msg, Object result){
         return init(code, msg, result);
     }
 
 
-    public static BaseResponse<Object> error(ResultStatusCode resultStatusCode){
+    public static BaseResponse error(ResultStatusCode resultStatusCode){
         return init(resultStatusCode.getCode(), resultStatusCode.getMessage());
     }
     /**
@@ -69,7 +69,7 @@ public class JsonResult {
      * @param result
      * @return
      */
-    public static BaseResponse<Object> error(ResultStatusCode resultStatusCode, Object result){
+    public static BaseResponse error(ResultStatusCode resultStatusCode, Object result){
         return init(resultStatusCode, result);
     }
 
@@ -78,7 +78,7 @@ public class JsonResult {
      * @param resultStatusCode
      * @return
      */
-    public static BaseResponse<Object> init(ResultStatusCode resultStatusCode, Object result){
+    public static BaseResponse init(ResultStatusCode resultStatusCode, Object result){
         return init(resultStatusCode.getCode(), resultStatusCode.getMessage(), result);
     }
 

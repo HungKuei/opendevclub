@@ -24,6 +24,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Slf4j
 @RestController
@@ -132,5 +135,13 @@ public class UserServiceImpl extends BaseService implements UserService {
         JSONObject token = new JSONObject();
         token.put("access_token", memberToken);
         return success(token);
+    }
+
+    @Override
+    public BaseResponse getUserListByPage(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit) {
+        List<String> list = new ArrayList<>();
+        List<User> userList = userMapper.selectByPageLimit(page, limit);
+        Long count = userMapper.count();
+        return success(userList, count);
     }
 }

@@ -4,6 +4,8 @@ import com.opendev.base.BaseResponse;
 import com.opendev.model.User;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequestMapping("/user")
 public interface UserService {
 
@@ -39,4 +41,13 @@ public interface UserService {
      */
     @PostMapping("/login")
     BaseResponse login(@RequestParam("username") String username, @RequestParam("password") String password);
+
+    /**
+     * 分页查询
+     * @param page
+     * @param limit
+     * @return
+     */
+    @PostMapping("/list")
+    BaseResponse getUserListByPage(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit);
 }

@@ -1,5 +1,6 @@
 package com.opendev.model;
 
+import com.hungkuei.model.AdminUI;
 import lombok.Data;
 
 import java.util.Date;
@@ -51,4 +52,6 @@ public class PaymentInfo {
      * 更新时间
      */
     private Date updateTime;
+
+    private AdminUI adminUI;
 }

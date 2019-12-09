@@ -17,4 +17,14 @@
         <include refid="Base_column_list"/>
         from user where username = #{username}
     </select>
+
+    <select id="selectByPageLimit" parameterType="Integer" resultType="com.opendev.model.User">
+        SELECT
+        <include refid="Base_column_list"/>
+        FROM user LIMIT #{page},#{limit}
+    </select>
+
+    <select id="count" resultType="Long">
+        select COUNT(*) FROM user;
+    </select>
 </mapper>

@@ -4,6 +4,8 @@ import com.opendev.enums.ResultStatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class BaseService {
 
@@ -33,6 +35,17 @@ public class BaseService {
     public BaseResponse success(Object data){
         return init(ResultStatusCode.SUCCESS.getCode(), ResultStatusCode.SUCCESS.getMessage(), data);
     }
+
+    /**
+     * 分页查询
+     * @param data
+     * @param count
+     * @return
+     */
+    public BaseResponse<Object> success(List<?> data, Long count){
+        return init(ResultStatusCode.SUCCESS.getCode(), ResultStatusCode.SUCCESS.getMessage(), data, count);
+    }
+
     /**
      * 自定义成功返回结果和状态码
      * @param code
@@ -40,7 +53,7 @@ public class BaseService {
      * @param data
      * @return
      */
-    public BaseResponse success(Integer code, String msg, Object data){
+    public BaseResponse<Object> success(Integer code, String msg, Object data){
         return init(code, msg, data);
     }
 
@@ -74,25 +87,25 @@ public class BaseService {
      * 自定义失败返回结果和状态码
      * @param code
      * @param msg
-     * @param result
+     * @param data
      * @return
      */
-    public BaseResponse<Object> error(Integer code, String msg, Object result){
-        return init(code, msg, result);
+    public BaseResponse error(Integer code, String msg, Object data){
+        return init(code, msg, data);
     }
 
 
-    public BaseResponse<Object> error(ResultStatusCode resultStatusCode){
+    public BaseResponse error(ResultStatusCode resultStatusCode){
         return init(resultStatusCode.getCode(), resultStatusCode.getMessage());
     }
     /**
      * 失败返回结果和状态码
      * @param resultStatusCode
-     * @param result
+     * @param data
      * @return
      */
-    public BaseResponse<Object> error(ResultStatusCode resultStatusCode, Object result){
-        return init(resultStatusCode, result);
+    public BaseResponse error(ResultStatusCode resultStatusCode, Object data){
+        return init(resultStatusCode, data);
     }
 
     /**
@@ -100,8 +113,8 @@ public class BaseService {
      * @param resultStatusCode
      * @return
      */
-    public BaseResponse<Object> init(ResultStatusCode resultStatusCode, Object result){
-        return init(resultStatusCode.getCode(), resultStatusCode.getMessage(), result);
+    public BaseResponse init(ResultStatusCode resultStatusCode, Object data){
+        return init(resultStatusCode.getCode(), resultStatusCode.getMessage(), data);
     }
 
     /**
@@ -118,10 +131,22 @@ public class BaseService {
      * 返回结果以及状态码
      * @param code
      * @param msg
-     * @param result
+     * @param data
      * @return
      */
-    public BaseResponse init(Integer code, String msg, Object result){
-        return new BaseResponse(code, msg, result);
+    public BaseResponse init(Integer code, String msg, Object data){
+        return new BaseResponse(code, msg, data);
+    }
+
+    /**
+     * 初始化分页结果
+     * @param code
+     * @param msg
+     * @param data
+     * @param count
+     * @return
+     */
+    public BaseResponse init(Integer code, String msg, List<?> data, Long count){
+        return new BaseResponse(code, msg, data, count);
     }
 }
