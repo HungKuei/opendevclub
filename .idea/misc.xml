@@ -13,12 +13,24 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/opendev-api/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-common/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-gateway-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-common/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-message/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-pay/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-pc-web/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-permisson/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-persistence/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-service/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-user/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-web/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-webapi/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-weixin/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-zuul-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/tx-lcn/pom.xml" />
         <option value="$PROJECT_DIR$/tx-lcn/tx-lcn-admin/pom.xml" />
         <option value="$PROJECT_DIR$/tx-lcn/tx-lcn-manager/pom.xml" />
         <option value="$PROJECT_DIR$/tx-lcn/tx-lcn-tc/pom.xml" />

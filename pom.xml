@@ -15,16 +15,12 @@
 
     <!--管理所有的模块-->
     <modules>
-        <module>opendev-eureka-server</module>
+        <module>opendev-basics</module>
+        <module>opendev-beans</module>
+        <module>opendev-server-api</module>
+        <module>opendev-server-api-impl</module>
+        <module>opendev-portal</module>
         <module>opendev-common</module>
-        <module>opendev-api</module>
-        <module>opendev-user</module>
-        <module>opendev-message</module>
-        <module>opendev-pc-web</module>
-        <module>opendev-weixin</module>
-        <module>opendev-pay</module>
-        <module>opendev-zuul-gateway</module>
-        <module>tx-lcn</module>
     </modules>
 
     <parent>

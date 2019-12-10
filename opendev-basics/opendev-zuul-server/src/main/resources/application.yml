@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+###eureka服务注册地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.2.98:9001/eureka/
+spring:
+  application:
+    name: zuul-server
+
+## 配置网关反向代理
+zuul:
+  routes:
+    ###服务接口
+    api-user:
+      path: /user/**
+      serviceId: user-server
+    api-pay:
+      path: /pay/**
+      serviceId: pay-server

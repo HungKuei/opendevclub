@@ -2,29 +2,29 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-api/opendev-api-pay" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-api/opendev-api-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-basics" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-basics/opendev-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-basics/opendev-eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-basics/opendev-message-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-basics/opendev-zuul-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-beans" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-beans/opendev-pay-bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-beans/opendev-user-bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-beans/opendev-wechat-bean" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-eureka-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-message" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-pay" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-pay/src/main/java/com/alipay/config/AlipayConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-common/opendev-common-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-pc-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-user" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-weixin" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-zuul-gateway" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-admin" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-client" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-logger" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-manager" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-manager" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-tracing" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-txmsg" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/tx-lcn-txmsg-netty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-portal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-portal/opendev-cms-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-portal/opendev-pc-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-pay-server-api-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-wechat-server-api-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api/opendev-pay-server-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api/opendev-user-server-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-server-api/opendev-wechat-server-api" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
