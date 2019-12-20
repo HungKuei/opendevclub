@@ -104,33 +104,12 @@
     <favorites_list name="opendev-server" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-eureka-server/src/main/resources/application.yml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-pay-server-api-impl/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwaggerConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-zuul-server/src/main/java/com/opendev/config/SwaggerConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="318">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -178,7 +157,6 @@
         <option value="$PROJECT_DIR$/opendev-server-api/opendev-pay-server-api/src/main/java/com/opendev/api/service/UserService.java" />
         <option value="$PROJECT_DIR$/opendev-beans/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-beans/opendev-pay-bean/src/main/java/com/opendev/bean/PaymentInfo.java" />
-        <option value="$PROJECT_DIR$/opendev-server-api/opendev-pay-server-api/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/service/impl/UserServiceImpl.java" />
@@ -204,7 +182,6 @@
         <option value="$PROJECT_DIR$/opendev-common/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-basics/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-wechat-server-api-impl/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/opendev-server-api-impl/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/aspect/LogAspectServiceApi.java" />
         <option value="$PROJECT_DIR$/opendev-server-api/pom.xml" />
@@ -219,6 +196,8 @@
         <option value="$PROJECT_DIR$/opendev-basics/opendev-zuul-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-zuul-server/src/main/java/com/opendev/ZuulServerApplication.java" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-zuul-server/src/main/java/com/opendev/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/opendev-server-api/opendev-pay-server-api/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-server-api-impl/pom.xml" />
       </list>
     </option>
   </component>
@@ -252,7 +231,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -263,8 +242,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,348 +255,12 @@
             <path>
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-message-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-pay-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api-impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-user-server-api-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,7 +283,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="settings.editor.splitter.proportion" value="0.27403846" />
   </component>
   <component name="RecentsManager">
@@ -794,12 +438,12 @@
       <listeners />
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.ZuulServerApplication" />
       <item itemvalue="Application.SuanFa" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.PayApplication" />
       <item itemvalue="Spring Boot.UserApplication" />
       <item itemvalue="Spring Boot.WeChatServerApplication" />
-      <item itemvalue="Spring Boot.ZuulServerApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -892,7 +536,10 @@
       <workItem from="1575946473743" duration="5116000" />
       <workItem from="1575956808007" duration="1481000" />
       <workItem from="1575958567705" duration="1690000" />
-      <workItem from="1575960279563" duration="7236000" />
+      <workItem from="1575960279563" duration="8944000" />
+      <workItem from="1576032411938" duration="2054000" />
+      <workItem from="1576808699669" duration="1332000" />
+      <workItem from="1576814265812" duration="1414000" />
     </task>
     <servers />
   </component>
@@ -911,14 +558,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604564000" />
+    <option name="totallyTimeSpent" value="611072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50053304" side_tool="true" weight="0.42701524" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.3011727" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="14" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.45860568" />
+      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.3011727" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
@@ -928,17 +576,16 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5239651" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32570806" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49946696" visible="true" weight="0.59477127" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4989339" weight="0.4335512" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25381264" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.19936034" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.20575693" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32995737" />
       <window_info id="Web" order="6" sideWeight="0.5017794" side_tool="true" weight="0.2553305" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -947,17 +594,18 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.4509804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32570806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.25599128" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5239651" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4989339" weight="0.4335512" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.4509804" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28649238" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25381264" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -966,16 +614,16 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.13834423" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.20479302" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5010661" side_tool="true" weight="0.3093682" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32570806" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.26385927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.20362474" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.3326226" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.3011727" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -983,9 +631,9 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.5017794" side_tool="true" weight="0.2553305" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.2527233" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.25599128" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32995737" />
-      <window_info anchor="bottom" id="Run Dashboard" order="14" visible="true" weight="0.36710238" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5239651" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1008,14 +656,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-wechat-server-api-impl/src/main/java/com/opendev/service/impl/WeChatServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-weixin/src/main/java/com/opendev/controller/DispatcherController.java" />
     <entry file="file://$PROJECT_DIR$/opendev-weixin/src/main/java/com/opendev/WeiXinApplication.java" />
     <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-wechat-server-api/src/main/java/com/opendev/api/service/WeChatService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1154,52 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-pay-server-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-wechat-server-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-eureka-server/src/main/java/com/opendev/EurekaServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,17 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1260,13 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-eureka-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1295,10 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,10 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1334,27 +906,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-zuul-server/src/main/java/com/opendev/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-eureka-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-wechat-server-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/opendev-server-api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        <state relative-caret-position="582">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-pay-server-api-impl/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="384">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-zuul-server/src/main/java/com/opendev/config/SwaggerConfig.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="436">
+          <caret line="175" column="22" lean-forward="true" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-pay-server-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-beans/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-beans/opendev-pay-bean/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
