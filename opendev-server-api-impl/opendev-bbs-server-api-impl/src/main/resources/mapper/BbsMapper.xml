@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.opendev.mapper.BbsMapper">
+
+    <sql id="Base_column_list">
+        bbs_id, bbs_type, content, user_id, comment_count, create_time
+    </sql>
+
+    <select id="selectLatestBbs" resultType="com.opendev.bean.BbsBlog">
+        select <include refid="Base_column_list"/>
+        from bbs_blog
+        where user_id = #{userId}
+        limit #{offset}, #{limit}
+    </select>
+
+    <select id="selectCounts">
+        select count(*)
+        from bbs_blog
+    </select>
+</mapper>

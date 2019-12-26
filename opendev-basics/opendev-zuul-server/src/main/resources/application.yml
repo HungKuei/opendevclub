@@ -3,9 +3,13 @@ server:
 
 ###eureka服务注册地址
 eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://192.168.2.98:9001/eureka/
+      defaultZone: http://${eureka.instance.hostname}:9001/eureka/
 spring:
   application:
     name: zuul-server
@@ -20,3 +24,6 @@ zuul:
     api-pay:
       path: /pay/**
       serviceId: pay-server
+    api-bbs:
+      path: /bbs/**
+      serviceId: bbs-server

@@ -24,6 +24,9 @@
         <option value="$PROJECT_DIR$/opendev-pc-web/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-permisson/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-persistence/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-bbs/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-cms-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-pc-web/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-service/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-user/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-web/pom.xml" />

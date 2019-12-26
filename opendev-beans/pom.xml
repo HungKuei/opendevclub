@@ -16,6 +16,7 @@
         <module>opendev-user-bean</module>
         <module>opendev-pay-bean</module>
         <module>opendev-wechat-bean</module>
+        <module>opendev-bbs-bean</module>
     </modules>
 
 

@@ -1,0 +1,70 @@
+server:
+  port: 8004
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
+spring:
+  application:
+    name: bbs-server
+  #redis连接信息
+  redis:
+    host: 192.168.93.129
+    password: 123456
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
+  #数据库连接信息
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.93.129:3306/opendevclub-bbs?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.opendev.bean
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+
+## Swagger相关配置
+swagger:
+  base-package: com.opendev.service
+  title: SpringCloud2.x构建微服务电商项目--论坛服务接口
+  description: 基于SpringBoot+Shiro+MyBatis+Redis+Layui+Swagger的前后端分离开源项目
+  version: 1.0
+  terms-of-service-url: www.opdev.club
+  contact:
+    name: 郭洪奎
+    email: hungkuei@163.com

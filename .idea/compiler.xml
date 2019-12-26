@@ -11,17 +11,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="opendev-cms-manager" />
+        <module name="opendev-bbs-bean" />
+        <module name="opendev-bbs-server-api" />
+        <module name="opendev-bbs-server-api-impl" />
         <module name="opendev-common-core" />
         <module name="opendev-eureka-server" />
         <module name="opendev-message-server" />
         <module name="opendev-pay-bean" />
         <module name="opendev-pay-server-api" />
         <module name="opendev-pay-server-api-impl" />
-        <module name="opendev-pc-web" />
         <module name="opendev-user-bean" />
         <module name="opendev-user-server-api" />
         <module name="opendev-user-server-api-impl" />
+        <module name="opendev-web-bbs" />
+        <module name="opendev-web-cms" />
         <module name="opendev-wechat-bean" />
         <module name="opendev-wechat-server-api" />
         <module name="opendev-wechat-server-api-impl" />
@@ -32,12 +35,15 @@
       <module name="opendev-api" target="1.8" />
       <module name="opendev-api-pay" target="1.8" />
       <module name="opendev-api-user" target="1.8" />
+      <module name="opendev-bbs" target="1.8" />
+      <module name="opendev-cms-manager" target="1.8" />
       <module name="opendev-common" target="1.8" />
       <module name="opendev-eureka" target="1.8" />
       <module name="opendev-gateway-zuul" target="1.8" />
       <module name="opendev-manager" target="1.8" />
       <module name="opendev-message" target="1.8" />
       <module name="opendev-pay" target="1.8" />
+      <module name="opendev-pc-web" target="1.8" />
       <module name="opendev-permisson" target="1.8" />
       <module name="opendev-persistence" target="1.8" />
       <module name="opendev-service" target="1.8" />

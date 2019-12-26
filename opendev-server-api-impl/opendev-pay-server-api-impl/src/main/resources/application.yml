@@ -61,7 +61,7 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-  type-aliases-package: com.opendev.model
+  type-aliases-package: com.opendev.bean
   mapper-locations: classpath:mapper/*Mapper.xml
 
 # 默认之配置为TM的本机默认端口

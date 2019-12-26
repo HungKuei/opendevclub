@@ -18,17 +18,17 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = -1157583928243692538L;
 
-    private Integer id;
+    private Long userId;
 
     /**
      * 账号
      */
-    private String username;
+    private String userName;
 
     /**
      * 密码
      */
-    private String password;
+    private String passWord;
 
     /**
      * 是电话号码，也是账号（登录用）

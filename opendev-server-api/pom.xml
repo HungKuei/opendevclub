@@ -16,6 +16,7 @@
         <module>opendev-user-server-api</module>
         <module>opendev-pay-server-api</module>
         <module>opendev-wechat-server-api</module>
+        <module>opendev-bbs-server-api</module>
     </modules>
 
     <properties>

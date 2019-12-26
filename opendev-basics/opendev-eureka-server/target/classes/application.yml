@@ -6,7 +6,7 @@ server:
 eureka:
   instance:
     ###注册到eurekaip地址
-    hostname: 127.0.0.1
+    hostname: 192.168.1.4
   client:
     ###表示是否注册自身到eureka服务器， 做集群是设置成true 生产配置为true
     register-with-eureka: false

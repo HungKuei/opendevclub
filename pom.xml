@@ -42,6 +42,7 @@
         <mysql-connector.version>5.1.38</mysql-connector.version>
         <pagehelper-version>1.2.10</pagehelper-version>
         <druid-version>1.1.20</druid-version>
+        <apollo-version>1.5.1</apollo-version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <lombok-version>1.18.8</lombok-version>
         <commons-net-version>3.6</commons-net-version>
@@ -51,22 +52,16 @@
     </properties>
 
     <dependencies>
-        <!-- 集成redis -->
+        <!-- 集成web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- 集成aop -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-
-        <!-- 集成web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- 集成发送邮件-->
@@ -80,22 +75,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!--Druid数据源-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid-version}</version>
-        </dependency>
-
-        <!--mysql数据库驱动-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
 
         <!-- 集成commons工具类 -->
         <dependency>

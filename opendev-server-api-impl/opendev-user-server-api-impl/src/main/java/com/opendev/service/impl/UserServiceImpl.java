@@ -53,16 +53,16 @@ public class UserServiceImpl extends BaseService implements UserService {
     //@LcnTransaction //分布式事务注解
     @Transactional  //本地事务注解
     public BaseResponse addUser(@RequestBody User user) {
-        if (StringUtils.isEmpty(user.getUsername())){
+        if (StringUtils.isEmpty(user.getUserName())){
             return error("用户名不能为空");
         }
         // 验证用户名是否存在
-        User userDb = userMapper.selectByUsername(user.getUsername());
+        User userDb = userMapper.selectByUsername(user.getUserName());
         if (!StringUtils.isEmpty(userDb)){
             return error("该用户名已存在");
         }
         // 默认密码123456
-        user.setPassword(MD5Util.MD5("123456"));
+        user.setPassWord(MD5Util.MD5("123456"));
         // 默认状态为正常
         user.setStatus(PublicConstant.STATUS_INVALID);
         if (userMapper.insert(user) != 1){
@@ -74,20 +74,20 @@ public class UserServiceImpl extends BaseService implements UserService {
     @Override
     public BaseResponse register(@RequestBody User user) {
         // 参数校验
-        if (StringUtils.isEmpty(user.getUsername())){
+        if (StringUtils.isEmpty(user.getUserName())){
             return error("用户名不能为空");
         }
         // 验证用户名是否存在
-        User userDb = userMapper.selectByUsername(user.getUsername());
+        User userDb = userMapper.selectByUsername(user.getUserName());
         if (!StringUtils.isEmpty(userDb)){
             return error("该用户名已存在");
         }
-        if (StringUtils.isEmpty(user.getPassword())){
+        if (StringUtils.isEmpty(user.getPassWord())){
             return error("密码不能为空");
         }
         user.setStatus(PublicConstant.STATUS_INVALID);
         // 这里对用户密码进行盐值加密
-        user.setPassword(MD5Util.MD5(user.getPassword()));
+        user.setPassWord(MD5Util.MD5(user.getPassWord()));
         // 判断邮箱或手机号是否为空，发送邮箱或短信验证
         if (!StringUtils.isEmpty(user.getEmail())){
             // 验证邮箱
@@ -123,13 +123,13 @@ public class UserServiceImpl extends BaseService implements UserService {
         }
         //密码校验
         String newPassword = MD5Util.MD5(password);
-        if (!userDb.getPassword().equals(newPassword)){
+        if (!userDb.getPassWord().equals(newPassword)){
             return error("账号或密码错误");
         }
         //生成token令牌
         String memberToken = TokenUtil.getMemberToken();
         //存入redis缓存
-        baseRedisService.setString(memberToken, String.valueOf(userDb.getId()), PublicConstant.TOKEN_TIMEOUT);
+        baseRedisService.setString(memberToken, String.valueOf(userDb.getUserId()), PublicConstant.TOKEN_TIMEOUT);
         //返回token
         JSONObject token = new JSONObject();
         token.put("access_token", memberToken);

@@ -3,19 +3,19 @@ server:
 
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 192.168.1.4
     prefer-ip-address: true
     instance-id: ${eureka.instance.hostname}:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://192.168.2.98:9001/eureka/
+      defaultZone: http://${eureka.instance.hostname}:9001/eureka/
 
 spring:
   application:
     name: user-server
   #redis连接信息
   redis:
-    host: 127.0.0.1
+    host: 192.168.93.129
     password: 123456
     port: 6379
     jedis:
@@ -26,8 +26,8 @@ spring:
         max-wait: -1
   #数据库连接信息
   datasource:
-    name: test
-    url: jdbc:mysql://192.168.93.128:3306/opendevclub-user?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    #name: test
+    url: jdbc:mysql://192.168.93.129:3306/opendevclub-user?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
     username: root
     password: 123456
     # 使用druid数据源
@@ -51,7 +51,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   ##activemq连接信息
   activemq:
-    broker-url: tcp://192.168.93.128:61616
+    broker-url: tcp://192.168.93.129:61616
     in-memory: true
     pool:
       enabled: false
@@ -62,13 +62,14 @@ messages:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-  type-aliases-package: com.opendev.model
+  type-aliases-package: com.opendev.bean
   mapper-locations: classpath:mapper/*Mapper.xml
 
 # 默认之配置为TM的本机默认端口
 tx-lcn:
   client:
     manager-address: 127.0.0.1:8070
+
 ## Swagger相关配置
 swagger:
   base-package: com.opendev.service
