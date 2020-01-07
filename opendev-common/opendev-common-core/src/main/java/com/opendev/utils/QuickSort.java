@@ -22,6 +22,7 @@ public class QuickSort {
         quickSort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
         System.out.println(binarySearch(arr, 0, arr.length - 1, 28));
+        System.out.println(isUgly(11));
     }
 
     public static void quickSort(int[] array, int left, int right){
@@ -55,6 +56,31 @@ public class QuickSort {
 
         quickSort(array, left, j-1);
         quickSort(array, j+1, right);
+    }
+
+    public static boolean isUgly(int val){
+        if (val == 0){
+            return false;
+        }
+
+        while (val != 1){
+            if (val % 2 == 0){
+                val /= 2;
+                continue;
+            }
+
+            if (val % 3 == 0){
+                val /= 3;
+                continue;
+            }
+
+            if (val % 5 == 0){
+                val /= 5;
+                continue;
+            }
+            return false;
+        }
+        return true;
     }
 
     public static int binarySearch(int[] arr, int left, int right, int findVal){

@@ -18,7 +18,7 @@ public interface UserService {
      */
     @ApiOperation(value = "根据用户id查询用户信息")
     @GetMapping("/get/{userId}")
-    BaseResponse<User> getByUserId(@PathVariable("userId") Integer userId);
+    BaseResponse<User> getByUserId(@PathVariable("userId") Long userId);
 
     /**
      * 添加用户

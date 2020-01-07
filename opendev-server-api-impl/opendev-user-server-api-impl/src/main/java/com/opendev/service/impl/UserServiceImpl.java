@@ -6,6 +6,7 @@ import com.opendev.base.BaseResponse;
 import com.opendev.base.BaseService;
 import com.opendev.bean.User;
 import com.opendev.constant.PublicConstant;
+import com.opendev.feign.WeChatServiceFeign;
 import com.opendev.mapper.UserMapper;
 import com.opendev.mq.RegisterMailboxProducer;
 import com.opendev.utils.MD5Util;
@@ -37,11 +38,14 @@ public class UserServiceImpl extends BaseService implements UserService {
     @Autowired
     private RegisterMailboxProducer registerMailboxProducer;
 
+    @Autowired
+    private WeChatServiceFeign weChatServiceFeign;
+
     @Value("${messages.queue}")
     private String messagesQueue;
 
     @Override
-    public BaseResponse<User> getByUserId(@PathVariable("userId") Integer userId) {
+    public BaseResponse<User> getByUserId(@PathVariable("userId") Long userId) {
         User user = userMapper.selectById(userId);
         if (user == null){
             return success("未查找到用户信息");

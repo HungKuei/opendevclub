@@ -19,16 +19,46 @@
         <module>opendev-bbs-server-api-impl</module>
     </modules>
 
+    <properties>
+        <weixin-java-mp.version>3.6.0</weixin-java-mp.version>
+        <xstream.version>1.4.11</xstream.version>
+    </properties>
+
     <dependencies>
         <!-- 集成eureka注册中心客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xstream</artifactId>
+                    <groupId>com.thoughtworks.xstream</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
+        <dependency>
+            <artifactId>xstream</artifactId>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <version>${xstream.version}</version>
+        </dependency>
+
+        <!-- Feign客户端工具 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
         <!-- 集成redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <!-- 通用Mapper -->

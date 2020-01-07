@@ -1,12 +1,19 @@
 package com.opendev.api.service;
 
+import com.opendev.base.BaseResponse;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@Api(tags = "微信服务接口")
 @RequestMapping("/wechat")
 public interface WeChatService {
 
@@ -20,6 +27,16 @@ public interface WeChatService {
      */
     @GetMapping("/dispatcher")
     String dispatcherGet(String signature, String timestamp, String nonce, String echostr);
+
+
+    @ApiOperation(value = "验证微信手机号和注册码是否匹配")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "query", name = "phone", dataType = "String", required = true, value = "注册手机号"),
+            @ApiImplicitParam(paramType = "query", name = "registCode", dataType = "String", required = true, value = "微信注册码")
+    })
+    @GetMapping("/validate")
+    BaseResponse validateWeChatCode(@RequestParam("phone") String phone, @RequestParam("registCode") String registCode);
+
 
 
     /**

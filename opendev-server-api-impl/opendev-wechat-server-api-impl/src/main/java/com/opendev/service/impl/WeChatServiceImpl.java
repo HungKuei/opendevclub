@@ -2,12 +2,14 @@ package com.opendev.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.opendev.api.service.WeChatService;
+import com.opendev.base.BaseResponse;
+import com.opendev.base.BaseService;
 import com.opendev.constant.PublicConstant;
-import com.opendev.utils.CheckUtil;
-import com.opendev.utils.HttpClientUtil;
-import com.opendev.utils.MessageUtil;
-import com.opendev.utils.XmlUtil;
+import com.opendev.utils.*;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,9 +19,12 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-public class WeChatServiceImpl implements WeChatService {
+public class WeChatServiceImpl extends BaseService implements WeChatService {
 
     private static final String REQUEST_URL = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=";
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     @Override
     public String dispatcherGet(String signature, String timestamp, String nonce, String echostr) {
@@ -30,6 +35,29 @@ public class WeChatServiceImpl implements WeChatService {
             return null;
         }
         return echostr;
+    }
+
+    @Override
+    public BaseResponse validateWeChatCode(@RequestParam("phone") String phone, @RequestParam("registCode") String registCode) {
+        // 参数验空
+        if (StringUtils.isEmpty(phone)){
+            error("手机号码为空");
+        }
+        if (StringUtils.isEmpty(registCode)){
+            error("注册码为空");
+        }
+        // 查询注册码并进行比对
+        String wechatCodeKey = PublicConstant.WECHAT_CODE_KEY + phone;
+        String redisCode = redisUtil.getString(wechatCodeKey);
+        if (StringUtils.isEmpty(redisCode)){
+            return error("注册码已过期");
+        }
+        if (!redisCode.equals(registCode)){
+            return error("注册码不正确");
+        }
+        // 删除注册码
+        redisUtil.delKey(wechatCodeKey);
+        return success();
     }
 
     @Override

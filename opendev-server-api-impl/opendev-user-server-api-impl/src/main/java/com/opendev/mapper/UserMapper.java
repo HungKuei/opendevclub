@@ -16,7 +16,7 @@ import java.util.List;
 
 public interface UserMapper extends BaseMapper<User> {
 
-    User selectById(@Param("userId") Integer userId);
+    User selectById(@Param("userId") Long userId);
 
     User selectByUsername(@Param("username") String username);
 

@@ -89,4 +89,14 @@ public interface PublicConstant {
      * // 支付失败
      */
     String PAY_FAIL = "fail";
+
+    /**
+     * 微信注册码
+     */
+    String WECHAT_CODE_KEY = "wechat_code";
+
+    /**
+     * 微信注册码有效时间30分钟
+     */
+    Long WECHAT_CODE_TIMEOUT = 1800l;
 }
