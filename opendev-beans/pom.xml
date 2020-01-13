@@ -19,5 +19,14 @@
         <module>opendev-bbs-bean</module>
     </modules>
 
+    <dependencies>
+        <!-- swagger-spring-boot -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>${swagger-spring-boot-version}</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

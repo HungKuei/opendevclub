@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Api(tags = "微信服务接口")
-@RequestMapping("/wechat")
 public interface WeChatService {
 
     /**
@@ -25,8 +24,11 @@ public interface WeChatService {
      * echostr	随机字符串
      * @return
      */
-    @GetMapping("/dispatcher")
-    String dispatcherGet(String signature, String timestamp, String nonce, String echostr);
+    @GetMapping("/wechat/dispatcher")
+    String dispatcherGet(@RequestParam("signature") String signature,
+                         @RequestParam("timestamp") String timestamp,
+                         @RequestParam("nonce") String nonce,
+                         @RequestParam("echostr") String echostr);
 
 
     @ApiOperation(value = "验证微信手机号和注册码是否匹配")
@@ -34,7 +36,7 @@ public interface WeChatService {
             @ApiImplicitParam(paramType = "query", name = "phone", dataType = "String", required = true, value = "注册手机号"),
             @ApiImplicitParam(paramType = "query", name = "registCode", dataType = "String", required = true, value = "微信注册码")
     })
-    @GetMapping("/validate")
+    @GetMapping("/wechat/validate")
     BaseResponse validateWeChatCode(@RequestParam("phone") String phone, @RequestParam("registCode") String registCode);
 
 
@@ -50,6 +52,6 @@ public interface WeChatService {
      * @param request
      * @return
      */
-    @PostMapping("/dispatcher")
-    void dispatcherGet(HttpServletRequest request, HttpServletResponse response) throws Exception;
+    @PostMapping("/wechat/dispatcher")
+    void dispatcherGet(@RequestParam("request") HttpServletRequest request, @RequestParam("response") HttpServletResponse response) throws Exception;
 }

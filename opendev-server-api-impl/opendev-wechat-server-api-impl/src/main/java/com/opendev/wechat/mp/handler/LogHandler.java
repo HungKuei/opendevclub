@@ -1,6 +1,6 @@
 package com.opendev.wechat.mp.handler;
 
-import com.github.binarywang.demo.wx.mp.utils.JsonUtils;
+import com.opendev.wechat.mp.utils.JsonUtils;
 import me.chanjar.weixin.common.session.WxSessionManager;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlMessage;

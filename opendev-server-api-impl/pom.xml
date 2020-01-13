@@ -61,10 +61,18 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- 通用Mapper -->
+        <!--mysql数据库驱动-->
         <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- springboot整合mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
         <!--Druid数据源-->
@@ -73,13 +81,14 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid-version}</version>
         </dependency>
-        <!--mysql数据库驱动-->
+
+        <!-- 通用Mapper -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector.version}</version>
-            <scope>runtime</scope>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
         </dependency>
+
+        <!-- 携程阿波罗分布式配置中心 -->
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>

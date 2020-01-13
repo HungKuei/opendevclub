@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "weixin.mp",
+      "type": "com.opendev.wechat.mp.config.WxMpProperties",
+      "sourceType": "com.opendev.wechat.mp.config.WxMpProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "weixin.mp.configs",
+      "type": "java.util.List<com.opendev.wechat.mp.config.WxMpProperties$MpConfig>",
+      "sourceType": "com.opendev.wechat.mp.config.WxMpProperties"
+    }
+  ],
+  "hints": []
+}

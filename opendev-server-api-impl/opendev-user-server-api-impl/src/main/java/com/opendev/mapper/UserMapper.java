@@ -1,6 +1,6 @@
 package com.opendev.mapper;
 
-import com.opendev.bean.User;
+import com.opendev.pojo.User;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.BaseMapper;
 

@@ -19,21 +19,11 @@
         <module>opendev-bbs-server-api</module>
     </modules>
 
-    <properties>
-        <swagger-spring-boot-version>1.9.1.RELEASE</swagger-spring-boot-version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.opendev</groupId>
             <artifactId>opendev-common-core</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <!-- swagger-spring-boot -->
-        <dependency>
-            <groupId>com.spring4all</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>${swagger-spring-boot-version}</version>
         </dependency>
     </dependencies>
 </project>

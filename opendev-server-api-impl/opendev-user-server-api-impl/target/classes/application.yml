@@ -1,9 +1,10 @@
 server:
   port: 8001
 
+
 eureka:
   instance:
-    hostname: 192.168.1.4
+    hostname: localhost
     prefer-ip-address: true
     instance-id: ${eureka.instance.hostname}:${server.port}
   client:
@@ -13,6 +14,10 @@ eureka:
 spring:
   application:
     name: user-server
+  cloud:
+    inetutils:
+      # 忽略指定网卡，支持正则表达式（这里使用正则表达式忽略所有虚拟机网卡）
+      ignored-interfaces: ['VMware.*']
   #redis连接信息
   redis:
     host: 192.168.93.129
@@ -27,7 +32,7 @@ spring:
   #数据库连接信息
   datasource:
     #name: test
-    url: jdbc:mysql://192.168.93.129:3306/opendevclub-user?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/opendevclub-user?useUnicode=true&characterEncoding=utf8&useSSL=true
     username: root
     password: 123456
     # 使用druid数据源
@@ -80,6 +85,12 @@ swagger:
   contact:
     name: 郭洪奎
     email: hungkuei@163.com
+
+## 打印sql日志
+logging:
+  level:
+    com.opendev.mapper: debug
+
 
 
 

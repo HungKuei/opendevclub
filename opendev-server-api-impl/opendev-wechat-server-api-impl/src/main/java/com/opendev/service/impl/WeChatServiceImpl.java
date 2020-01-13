@@ -27,7 +27,10 @@ public class WeChatServiceImpl extends BaseService implements WeChatService {
     private RedisUtil redisUtil;
 
     @Override
-    public String dispatcherGet(String signature, String timestamp, String nonce, String echostr) {
+    public String dispatcherGet(@RequestParam("signature") String signature,
+                                @RequestParam("timestamp") String timestamp,
+                                @RequestParam("nonce") String nonce,
+                                @RequestParam("echostr") String echostr) {
         // 验证参数
         boolean isCheck = CheckUtil.checkSignature(signature, timestamp, nonce);
         // 验证成功返回随机字符串
@@ -61,7 +64,7 @@ public class WeChatServiceImpl extends BaseService implements WeChatService {
     }
 
     @Override
-    public void dispatcherGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void dispatcherGet(@RequestParam("request") HttpServletRequest request, @RequestParam("response") HttpServletResponse response) throws Exception {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         // 将XML转换成Map格式

@@ -3,19 +3,19 @@
 <mapper namespace="com.opendev.mapper.UserMapper">
 
     <sql id="Base_column_list">
-        id, username, password, mobile, nick_name, avatar, sex, email, email_verified, true_name, id_card, birthday, status, create_time, update_time
+        user_id, user_name, pass_word, mobile, nick_name, avatar, sex, email, email_verified, true_name, id_card, birthday, status, create_time, update_time
     </sql>
 
-    <select id="selectById" parameterType="Integer" resultType="com.opendev.bean.User">
+    <select id="selectById" parameterType="Long" resultType="com.opendev.bean.User">
         select
         <include refid="Base_column_list"/>
-        from user where id = #{userId}
+        from user where user_id = #{userId}
     </select>
 
     <select id="selectByUsername" parameterType="String" resultType="com.opendev.bean.User">
         select
         <include refid="Base_column_list"/>
-        from user where username = #{username}
+        from user where user_name = #{username}
     </select>
 
     <select id="selectByPageLimit" parameterType="Integer" resultType="com.opendev.bean.User">

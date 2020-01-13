@@ -3,15 +3,52 @@ server:
 
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: localhost
     prefer-ip-address: true
     instance-id: ${eureka.instance.hostname}:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://192.168.2.98:9001/eureka/
+      defaultZone: http://${eureka.instance.hostname}:9001/eureka/
 
 spring:
   application:
     name: wechat-server
+  cloud:
+    inetutils:
+      # 忽略指定网卡，支持正则表达式（这里使用正则表达式忽略所有虚拟机网卡）
+      ignored-interfaces: ['VMware.*']
+  redis:
+    host: 192.168.93.129
+    password: 123456
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
+
+weixin:
+  mp:
+    configs:
+      - appId: wxfd8856d15d7ed932 #（一个公众号的appid）
+        secret: 9f1c95e3cada54827e1a7d865d87b6e1 #（公众号的appsecret）
+        token: E10ADC3949BA59ABBE56E057F20F883E #（接口配置里的Token值）
+
+opendevclub:
+  weixin:
+    regist:
+      ###微信注册码消息
+      message: 您的注册码为:%s，请关注opendevclub开源社区，期待你的加入，感谢！
+    ###默认提示消息
+    default:
+      regist:
+        message: 您的消息，我们已经收到,会及时回复给您的!
+
+logging:
+  level:
+    org.springframework.web: INFO
+    com.opendev: DEBUG
+    me.chanjar.weixin: DEBUG
 
 
