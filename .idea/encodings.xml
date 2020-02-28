@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/opendev-basics" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-basics/opendev-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-basics/opendev-message-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-basics/opendev-zuul-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-beans" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-beans/opendev-bbs-bean" charset="UTF-8" />
@@ -14,9 +15,6 @@
     <file url="file://$PROJECT_DIR$/opendev-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-common/opendev-common-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-portal" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-portal/opendev-bbs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-portal/opendev-cms-manager" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opendev-portal/opendev-pc-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/opendev-server-api" charset="UTF-8" />

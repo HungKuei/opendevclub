@@ -2,8 +2,8 @@ package com.opendev.controller;
 
 import com.opendev.base.BaseResponse;
 import com.opendev.base.BaseService;
-import com.opendev.bean.User;
 import com.opendev.constant.PublicConstant;
+import com.opendev.dto.UserOutputDTO;
 import com.opendev.feign.UserServiceFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -21,7 +21,7 @@ public class BaseController extends BaseService {
      * @param request
      * @return
      */
-    public User getCurrentUserInfo(HttpServletRequest request){
+    public UserOutputDTO getCurrentUserInfo(HttpServletRequest request){
         String token = getToken(request);
         if (token == null){
             return null;
@@ -31,9 +31,9 @@ public class BaseController extends BaseService {
         if (StringUtils.isEmpty(userId)){
             return null;
         }
-        BaseResponse<User> response = userServiceFeign.getByUserId(Integer.valueOf(userId));
-        User user = response.getData();
-        return user;
+        BaseResponse<UserOutputDTO> response = userServiceFeign.getByUserId(Long.valueOf(userId));
+        UserOutputDTO data = response.getData();
+        return data;
     }
 
     /**
@@ -51,9 +51,10 @@ public class BaseController extends BaseService {
         if (StringUtils.isEmpty(userId)){
             return false;
         }
-        BaseResponse<User> response = userServiceFeign.getByUserId(Integer.valueOf(userId));
-        User user = response.getData();
-        if (StringUtils.isEmpty(user)){
+        Long id = Long.valueOf(userId);
+        BaseResponse<UserOutputDTO> response = userServiceFeign.getByUserId(id);
+        UserOutputDTO data = response.getData();
+        if (StringUtils.isEmpty(data)){
             return false;
         }
         return true;

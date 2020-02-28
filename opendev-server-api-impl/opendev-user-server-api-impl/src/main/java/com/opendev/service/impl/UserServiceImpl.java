@@ -7,6 +7,7 @@ import com.opendev.base.BaseService;
 import com.opendev.constant.PublicConstant;
 import com.opendev.dto.UserInputDTO;
 import com.opendev.dto.UserOutputDTO;
+import com.opendev.enums.ResultStatusCode;
 import com.opendev.feign.WeChatServiceFeign;
 import com.opendev.mapper.UserMapper;
 import com.opendev.mq.RegisterMailboxProducer;
@@ -23,6 +24,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -43,13 +46,13 @@ public class UserServiceImpl extends BaseService implements UserService {
     private String messagesQueue;
 
     @Override
-    public BaseResponse<UserOutputDTO> getByUserId(@PathVariable("userId") Long userId) {
+    public BaseResponse<UserOutputDTO> getByUserId(@RequestParam("userId") Long userId) {
         User user = userMapper.selectById(userId);
         UserOutputDTO userOutputDTO = BeanUtil.doToDto(user, UserOutputDTO.class);
         if (userOutputDTO == null){
             return success("未查找到用户信息");
         }
-        return success(user);
+        return success(userOutputDTO);
     }
 
     @Override
@@ -67,7 +70,7 @@ public class UserServiceImpl extends BaseService implements UserService {
         // 默认密码123456
         userInputDTO.setPassword(MD5Util.MD5("123456"));
         User user = BeanUtil.dtoToDo(userInputDTO, User.class);
-        if (userMapper.insert(user) != 1){
+        if (userMapper.insertSelective(user) != 1){
             return error("添加失败");
         }
         return success("添加成功");
@@ -107,6 +110,8 @@ public class UserServiceImpl extends BaseService implements UserService {
             registerMailboxProducer.sendMsg(messages_queue, msgJson);
         }
         User user = BeanUtil.dtoToDo(userInputDTO, User.class);
+        user.setStatus(PublicConstant.STATUS_INVALID);
+        user.setCreateTime(new Date());
         if (userMapper.insert(user) != 1) {
             return error("注册失败");
         }
@@ -143,9 +148,36 @@ public class UserServiceImpl extends BaseService implements UserService {
     }
 
     @Override
+    public BaseResponse<UserOutputDTO> ssoLogin(@RequestBody UserInputDTO userInputDTO) {
+        // 验证参数
+        String username = userInputDTO.getUsername();
+        if (StringUtils.isEmpty(username)){
+            return error(ResultStatusCode.NOT_FOUND.getCode(),"用户名不能为空");
+        }
+        String password = userInputDTO.getPassword();
+        if (StringUtils.isEmpty(password)){
+            return error(ResultStatusCode.NOT_FOUND.getCode(),"密码不能为空");
+        }
+        User isExistUser = userMapper.selectByUsername(username);
+        if (StringUtils.isEmpty(isExistUser)){
+            return error(ResultStatusCode.NOT_FOUND.getCode(),"用户不存在");
+        }
+        //密码校验
+        String newPassword = MD5Util.MD5(password);
+        if (!isExistUser.getPassword().equals(newPassword)){
+            return error(ResultStatusCode.SYSTEM_ERR.getCode(),"账号或密码错误");
+        }
+        return success(BeanUtil.doToDto(isExistUser, UserOutputDTO.class));
+    }
+
+    @Override
     public BaseResponse getUserListByPage(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit) {
         List<User> userList = userMapper.selectByPageLimit(page, limit);
+        List<UserOutputDTO> userOutputDTOS = new ArrayList<>();
+        userList.stream().forEach(v -> {
+            userOutputDTOS.add(BeanUtil.doToDto(v, UserOutputDTO.class));
+        });
         Long count = userMapper.count();
-        return success(userList, count);
+        return success(userOutputDTOS, count);
     }
 }

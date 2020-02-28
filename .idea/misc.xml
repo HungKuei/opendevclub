@@ -9,6 +9,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/opendev-common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -16,7 +17,6 @@
         <option value="$PROJECT_DIR$/opendev-api/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-common/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-gateway-zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/opendev-common/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-manager/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-message/pom.xml" />

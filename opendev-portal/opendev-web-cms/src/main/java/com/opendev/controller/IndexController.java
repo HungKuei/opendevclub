@@ -1,9 +1,12 @@
 package com.opendev.controller;
 
-import com.opendev.bean.User;
+import com.opendev.dto.UserOutputDTO;
+import com.xxl.sso.core.conf.Conf;
+import com.xxl.sso.core.user.XxlSsoUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,11 +22,18 @@ public class IndexController extends BaseController {
     @GetMapping("/")
     public String index(HttpServletRequest request, Model model){
         if (isAuthentication(request)){
-            User userInfo = getCurrentUserInfo(request);
+            UserOutputDTO userInfo = getCurrentUserInfo(request);
             model.addAttribute("user", userInfo);
             return INDEX;
         }
         return REDIRECT_LOGIN;
+    }
+
+    @RequestMapping("/index")
+    public String index(Model model, HttpServletRequest request){
+        XxlSsoUser xxlUser = (XxlSsoUser) request.getAttribute(Conf.SSO_USER);
+        model.addAttribute("user", xxlUser);
+        return "main";
     }
 
     /*工作台*/

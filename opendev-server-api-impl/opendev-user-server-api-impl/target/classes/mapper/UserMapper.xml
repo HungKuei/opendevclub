@@ -3,22 +3,22 @@
 <mapper namespace="com.opendev.mapper.UserMapper">
 
     <sql id="Base_column_list">
-        user_id, user_name, pass_word, mobile, nick_name, avatar, sex, email, email_verified, true_name, id_card, birthday, status, create_time, update_time
+        user_id, username, password, mobile, email, nick_name, avatar, sex, birthday, qq_open_id, wx_open_id, status, create_time, update_time
     </sql>
 
-    <select id="selectById" parameterType="Long" resultType="com.opendev.bean.User">
+    <select id="selectById" parameterType="Long" resultType="com.opendev.pojo.User">
         select
         <include refid="Base_column_list"/>
         from user where user_id = #{userId}
     </select>
 
-    <select id="selectByUsername" parameterType="String" resultType="com.opendev.bean.User">
+    <select id="selectByUsername" parameterType="String" resultType="com.opendev.pojo.User">
         select
         <include refid="Base_column_list"/>
-        from user where user_name = #{username}
+        from user where username = #{username}
     </select>
 
-    <select id="selectByPageLimit" parameterType="Integer" resultType="com.opendev.bean.User">
+    <select id="selectByPageLimit" parameterType="Integer" resultType="com.opendev.pojo.User">
         SELECT
         <include refid="Base_column_list"/>
         FROM user LIMIT #{page},#{limit}

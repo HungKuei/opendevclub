@@ -28,6 +28,7 @@
         <module name="opendev-wechat-bean" />
         <module name="opendev-wechat-server-api" />
         <module name="opendev-wechat-server-api-impl" />
+        <module name="opendev-xxl-sso-server" />
         <module name="opendev-zuul-server" />
       </profile>
     </annotationProcessing>
@@ -37,7 +38,6 @@
       <module name="opendev-api-user" target="1.8" />
       <module name="opendev-bbs" target="1.8" />
       <module name="opendev-cms-manager" target="1.8" />
-      <module name="opendev-common" target="1.8" />
       <module name="opendev-eureka" target="1.8" />
       <module name="opendev-gateway-zuul" target="1.8" />
       <module name="opendev-manager" target="1.8" />

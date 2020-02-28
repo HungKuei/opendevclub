@@ -50,6 +50,9 @@
         <swagger2.version>2.2.2</swagger2.version>
         <swagger-spring-boot-version>1.9.1.RELEASE</swagger-spring-boot-version>
         <fastjson.version>1.2.39</fastjson.version>
+        <weixin-java-mp.version>3.6.0</weixin-java-mp.version>
+        <xstream.version>1.4.11</xstream.version>
+        <spring-boot.version>2.1.9.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -159,6 +162,20 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>opendevclub</id>
+            <url>http://192.168.93.129:8081/repository/opendevclub-release/</url>
+        </repository>
+    </distributionManagement>
+    <!-- Maven私服 -->
+    <repositories>
+        <repository>
+            <id>opendevclub</id>
+            <url>http://192.168.93.129:8081/repository/opendevclub-release/</url>
+        </repository>
+    </repositories>
     <!--指定使用maven打包-->
     <build>
         <plugins>
@@ -169,6 +186,25 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <!-- Source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -1,25 +1,20 @@
 package com.opendev.controller;
 
-import com.opendev.base.BaseResponse;
-import com.opendev.feign.BbsServiceFeign;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.xxl.sso.core.conf.Conf;
+import com.xxl.sso.core.user.XxlSsoUser;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class IndexController {
 
-    @Autowired
-    private BbsServiceFeign bbsServiceFeign;
-
     @RequestMapping("/index")
-    public String index(){
+    public String index(Model model, HttpServletRequest request){
+        XxlSsoUser xxlUser = (XxlSsoUser) request.getAttribute(Conf.SSO_USER);
+        model.addAttribute("user", xxlUser);
         return "index";
-    }
-
-    @GetMapping("/getLatestBbs")
-    public BaseResponse getLatestBbs(Long userId, int offset, int limit){
-        return bbsServiceFeign.getLatestBbs(userId, offset, limit);
     }
 }

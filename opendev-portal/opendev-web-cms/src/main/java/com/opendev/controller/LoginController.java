@@ -1,8 +1,8 @@
 package com.opendev.controller;
 
 import com.opendev.base.BaseResponse;
-import com.opendev.bean.User;
 import com.opendev.constant.PublicConstant;
+import com.opendev.dto.UserInputDTO;
 import com.opendev.enums.ResultStatusCode;
 import com.opendev.feign.UserServiceFeign;
 import com.opendev.utils.CookieUtil;
@@ -32,8 +32,8 @@ public class LoginController extends BaseController {
 
     @PostMapping("register")
     @ResponseBody
-    public BaseResponse register(@RequestBody User user){
-        return userServiceFeign.register(user);
+    public BaseResponse register(@RequestBody UserInputDTO userInputDTO){
+        return userServiceFeign.register(userInputDTO);
     }
 
     @GetMapping("login")
@@ -70,13 +70,14 @@ public class LoginController extends BaseController {
         CookieUtil.addCookie(response, PublicConstant.COOKIE_TOKEN, access_token, PublicConstant.COOKIE_TIMEOUT);
     }
 
-    @GetMapping("logout")
-    public String logout(HttpServletRequest request){
+    @PostMapping("logout")
+    @ResponseBody
+    public BaseResponse logout(HttpServletRequest request){
         if (!isAuthentication(request)){
-            return REDIRECT_INDEX;
+            return error();
         }
         String token = getToken(request);
         baseRedisService.delKey(token);
-        return REDIRECT_INDEX;
+        return success();
     }
 }

@@ -1,5 +1,6 @@
 package com.opendev.api.service;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import com.opendev.base.BaseResponse;
 import com.opendev.dto.UserInputDTO;
 import com.opendev.dto.UserOutputDTO;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Api(tags = "用户服务接口")
-@RequestMapping("/user")
 public interface UserService {
 
     /**
@@ -20,8 +20,8 @@ public interface UserService {
      * @return
      */
     @ApiOperation(value = "根据用户id查询用户信息")
-    @GetMapping("/get/{userId}")
-    BaseResponse<UserOutputDTO> getByUserId(@PathVariable("userId") Long userId);
+    @GetMapping("/user/get")
+    BaseResponse<UserOutputDTO> getByUserId(@RequestParam("userId") Long userId);
 
     /**
      * 添加用户
@@ -29,7 +29,7 @@ public interface UserService {
      * @return
      */
     @ApiOperation(value = "添加用户")
-    @PostMapping("/add")
+    @PostMapping("/user/add")
     BaseResponse addUser(@RequestBody UserInputDTO userInputDTO);
 
     /**
@@ -38,7 +38,7 @@ public interface UserService {
      * @return
      */
     @ApiOperation(value = "用户注册")
-    @PostMapping("/register")
+    @PostMapping("/user/register")
     BaseResponse register(@RequestBody UserInputDTO userInputDTO);
 
     /**
@@ -48,12 +48,21 @@ public interface UserService {
      * @return
      */
     @ApiOperation(value = "用户登录")
-    @PostMapping("/login")
+    @PostMapping("/user/login")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query", name = "username", dataType = "String", required = true, value = "用户名"),
             @ApiImplicitParam(paramType = "query", name = "password", dataType = "String", required = true, value = "密码")
     })
     BaseResponse login(@RequestParam("username") String username, @RequestParam("password") String password);
+
+    /**
+     * sso单点登录
+     * @param userInputDTO
+     * @return
+     */
+    @ApiOperation(value = "sso单点登录")
+    @PostMapping("/user/ssoLogin")
+    BaseResponse<UserOutputDTO> ssoLogin(@RequestBody UserInputDTO userInputDTO);
 
     /**
      * 分页查询
@@ -63,9 +72,9 @@ public interface UserService {
      */
     @ApiOperation(value = "分页查询")
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "query", name = "page", dataType = "Integer", required = true, value = "页码"),
-            @ApiImplicitParam(paramType = "query", name = "limit", dataType = "Integer", required = true, value = "每页行数")
+            @ApiImplicitParam(paramType = "query", name = "page", dataType = "int", required = true, value = "页码"),
+            @ApiImplicitParam(paramType = "query", name = "limit", dataType = "int", required = true, value = "每页行数")
     })
-    @PostMapping("/list")
+    @PostMapping("/user/list")
     BaseResponse getUserListByPage(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit);
 }

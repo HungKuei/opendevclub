@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-@FeignClient("user-server")
+@FeignClient(value = "user-server")
 public interface UserServiceFeign extends UserService {
 }

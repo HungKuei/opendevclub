@@ -39,9 +39,8 @@ public interface PublicConstant {
 
     Integer SUCCESS_CODE = 200;
 
-    Integer FAIL_CODE = 500;
-
-    Integer DEFAULT_TYPE_ = 0;
+    // 系统错误
+    Integer HTTP_RES_CODE_500 = 500;
 
     Integer INVALID_TYPE = 1;
 

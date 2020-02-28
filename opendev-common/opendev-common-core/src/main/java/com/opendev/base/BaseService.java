@@ -84,6 +84,14 @@ public class BaseService {
     }
 
     /**
+     * 自定义响应信息
+     * @return
+     */
+    public BaseResponse error(Integer code, String msg){
+        return init(code, msg);
+    }
+
+    /**
      * 自定义失败返回结果和状态码
      * @param code
      * @param msg
