@@ -4,6 +4,7 @@ import com.opendev.enums.ResultStatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 
 @Component
@@ -42,7 +43,7 @@ public class BaseService {
      * @param count
      * @return
      */
-    public BaseResponse<Object> success(List<?> data, Long count){
+    public BaseResponse success(List data, Long count){
         return init(ResultStatusCode.SUCCESS.getCode(), ResultStatusCode.SUCCESS.getMessage(), data, count);
     }
 

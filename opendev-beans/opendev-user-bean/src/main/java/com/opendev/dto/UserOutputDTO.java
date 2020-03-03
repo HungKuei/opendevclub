@@ -33,6 +33,12 @@ public class UserOutputDTO implements Serializable {
     private String username;
 
     /**
+     * 用户名称
+     */
+    @ApiModelProperty(value = "用户昵称")
+    private String nickName;
+
+    /**
      * 手机号码
      */
     @ApiModelProperty(value = "手机号码")

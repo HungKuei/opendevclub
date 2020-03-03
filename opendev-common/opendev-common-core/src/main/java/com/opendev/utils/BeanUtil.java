@@ -54,7 +54,7 @@ public class BeanUtil {
         try {
             Dto newInstance = dtoClass.newInstance();
             BeanUtils.copyProperties(doEntity, newInstance);
-            // Dto转换Do
+            // Do转换Dto
             return newInstance;
         } catch (Exception e) {
             return null;

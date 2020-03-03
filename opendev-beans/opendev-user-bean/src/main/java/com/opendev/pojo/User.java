@@ -1,5 +1,6 @@
 package com.opendev.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -18,6 +19,11 @@ public class User {
     private String username;
 
     /**
+     * 用户昵称
+     */
+    private String nickName;
+
+    /**
      * 用户密码
      */
     private String password;
@@ -32,10 +38,6 @@ public class User {
      */
     private String email;
 
-    /**
-     * 用户昵称
-     */
-    private String nickName;
 
     /**
      * 用户头像
@@ -50,6 +52,7 @@ public class User {
     /**
      * 用户出生日期
      */
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date birthday;
 
     /**
@@ -70,10 +73,12 @@ public class User {
     /**
      * 注册时间
      */
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date updateTime;
 }

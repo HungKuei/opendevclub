@@ -1,6 +1,5 @@
 package com.opendev.api.service;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import com.opendev.base.BaseResponse;
 import com.opendev.dto.UserInputDTO;
 import com.opendev.dto.UserOutputDTO;
@@ -9,6 +8,8 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @Api(tags = "用户服务接口")

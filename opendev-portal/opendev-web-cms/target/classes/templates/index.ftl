@@ -1,52 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  	<#import "./common/common.macro.ftl" as netCommon>
-	<@netCommon.commonStyle />
-    <!-- daterangepicker -->
-    <link rel="stylesheet" href="${request.contextPath}/static/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <title>首页</title>
+    <#import "./common/common.macro.ftl" as netCommon>
+    <@netCommon.commonStyle />
+    <@netCommon.commonScript />
+    <link rel="stylesheet" href="${request.contextPath}/static/css/index.css">
+    <title>OpenDev管理后台</title>
 </head>
-<body class="hold-transition skin-blue sidebar-mini <#if cookieMap?exists && cookieMap["xxljob_adminlte_settings"]?exists && "off" == cookieMap["xxljob_adminlte_settings"].value >sidebar-collapse</#if> ">
-<div class="wrapper">
-	<!-- header -->
-	<@netCommon.commonHeader />
-	<!-- left -->
-	<@netCommon.commonLeft "index" />
-	
-	<!-- Content Wrapper. Contains page content -->
-	<div class="content-wrapper">
-		<!-- Content Header (Page header) -->
-		<section class="content-header">
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
 
-			<h1>运行报表<small>任务调度中心</small></h1>
-			<ol class="breadcrumb">
-				<li><a><i class="fa fa-dashboard"></i>调度中心</a></li>
-				<li class="active">使用教程</li>
-			</ol>
-		</section>
+    <!-- header -->
+    <@netCommon.commonHeader />
 
-		<!-- Main content -->
-		<section class="content">
+    <!-- left -->
+    <@netCommon.commonLeft />
 
-            <!-- 任务信息 -->
-
-		</section>
-		<!-- /.content -->
-	</div>
-	<!-- /.content-wrapper -->
-	
-	<!-- footer -->
+    <!-- Main content -->
     <@netCommon.commonControl />
-	<@netCommon.commonFooter />
 
+    <!-- footer -->
+    <@netCommon.commonFooter />
+    <div class="mobile-mask"></div>
 </div>
-<@netCommon.commonScript />
-<!-- daterangepicker -->
-<script src="${request.contextPath}/static/adminlte/bower_components/moment/moment.min.js"></script>
-<script src="${request.contextPath}/static/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<#-- echarts -->
-<script src="${request.contextPath}/static/plugins/echarts/echarts.common.min.js"></script>
-<#-- <script src="${request.contextPath}/static/js/index.js"></script> -->
+<script src="${request.contextPath}/static/js/index.js"></script>
 </body>
 </html>

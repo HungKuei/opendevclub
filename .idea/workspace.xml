@@ -111,7 +111,52 @@
     <favorites_list name="opendev-server" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="common.macro.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/common/common.macro.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1225">
+              <caret line="73" column="43" lean-forward="true" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index/console.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/user/users.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,6 +183,7 @@
       <find>add</find>
       <find>I18n</find>
       <find>commonLeft</find>
+      <find>pageDemo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,31 +192,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/opendev-beans/pom.xml" />
-        <option value="$PROJECT_DIR$/opendev-server-api/pom.xml" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/bean/User.java" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/bean/BaseUser.java" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/bean/do/UserDO" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/vo/UserVo.java" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/pojo/User.java" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/dto/UserInputDTO.java" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/dto/UserLoginInputDTO.java" />
-        <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/resources/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/utils/BeanUtil.java" />
-        <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/feign/WeChatServiceFeign.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/feign/UserServiceFeign.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/login.js" />
         <option value="$PROJECT_DIR$/opendev-server-api-impl/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/dto/UserOutputDTO.java" />
-        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/index.js" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/common.1.js" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index.ftl" />
-        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/common/common.macro.ftl" />
         <option value="$PROJECT_DIR$/opendev-basics/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/application.yml" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/application.yml" />
@@ -179,24 +207,42 @@
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/feign/UserServiceFeign.java" />
-        <option value="$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/src/main/java/com/opendev/api/service/UserService.java" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/WebController.java" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/XxlSsoServerApplication.java" />
-        <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseService.java" />
-        <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/constant/PublicConstant.java" />
         <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseController.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/BBSApplication.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/config/XxlSsoConfig.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/main.ftl" />
-        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-portal/pom.xml" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/config/XxlSsoConfig.java" />
         <option value="$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/js/index.js" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/js/login.js" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/login.js" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/login.ftl" />
+        <option value="$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/css/admin.css" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/core.js" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/index.js" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index/console.ftl" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/user/user.ftl" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/common/common.macro.ftl" />
+        <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/utils/BeanUtil.java" />
+        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/pojo/User.java" />
+        <option value="$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/src/main/java/com/opendev/api/service/UserService.java" />
+        <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseResponse.java" />
+        <option value="$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/dto/UserOutputDTO.java" />
+        <option value="$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseService.java" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/user/users.ftl" />
       </list>
     </option>
   </component>
@@ -229,9 +275,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="26" />
-    <option name="y" value="99" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-29" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -254,26 +300,82 @@
             <path>
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-xxl-sso-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-xxl-sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-xxl-sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-xxl-sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-xxl-sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-xxl-sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -281,7 +383,7 @@
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -290,7 +392,7 @@
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -300,7 +402,7 @@
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -311,7 +413,19 @@
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -323,10 +437,30 @@
               <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
               <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
               <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="opendev-web-bbs" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="opendevclub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="opendevclub" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-portal" type="462c0819:PsiDirectoryNode" />
+              <item name="opendev-web-cms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -348,7 +482,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../urban_water_logging" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -358,19 +492,15 @@
     <property name="settings.editor.splitter.proportion" value="0.27403846" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\resources" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-basics" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-pc-web\src\main\resources\templates\user" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-pc-web\src\main\resources\templates\system" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-pc-web\src\main\resources\static\module" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.opendev.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\resources" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\java" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources\templates" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources" />
       <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources\static" />
-      <recent name="D:\idea_workspace\opendevclub\opendev-server-api-impl\opendev-wechat-server-api-impl\src\main\java\com\opendev\wechat" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources\static\img" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources\static\assets\font" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources\static\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.opendev.config" />
@@ -379,8 +509,12 @@
       <recent name="com.opendev.api.service" />
       <recent name="com.opendev.controller" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.opendev.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\idea_workspace\opendevclub\opendev-portal\opendev-web-cms\src\main\resources\static\js" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\resources\static" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\resources\static\css" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\resources\static\assets\js" />
+      <recent name="D:\idea_workspace\opendevclub\opendev-basics\opendev-xxl-sso-server\src\main\resources\static\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -401,7 +535,7 @@
     </option>
     <option name="contentProportion" value="0.18319783" />
   </component>
-  <component name="RunManager" selected="Spring Boot.BBSApplication">
+  <component name="RunManager" selected="Spring Boot.CMSManagerApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -626,7 +760,9 @@
       <workItem from="1582850860200" duration="3579000" />
       <workItem from="1582866009140" duration="3983000" />
       <workItem from="1582870794481" duration="7624000" />
-      <workItem from="1582878695883" duration="526000" />
+      <workItem from="1582878695883" duration="1135000" />
+      <workItem from="1583109348122" duration="934000" />
+      <workItem from="1583115527100" duration="34238000" />
     </task>
     <servers />
   </component>
@@ -645,10 +781,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="760317000" />
+    <option name="totallyTimeSpent" value="796297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5010661" side_tool="true" weight="0.26143792" />
@@ -667,12 +804,12 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4989339" visible="true" weight="0.3148148" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4989339" visible="true" weight="0.2908497" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36819172" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.2457356" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.24520256" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32995737" />
       <window_info id="Web" order="6" sideWeight="0.5017794" side_tool="true" weight="0.2553305" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -685,42 +822,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.25599128" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5239651" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32897604" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.4509804" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25381264" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.5017794" side_tool="true" weight="0.2553305" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5010661" side_tool="true" weight="0.3093682" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32570806" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.20362474" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.3011727" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Web" order="6" sideWeight="0.5017794" side_tool="true" weight="0.2553305" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.5017794" side_tool="true" weight="0.2553305" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.25599128" />
-      <window_info anchor="right" id="Bean Validation" order="8" weight="0.32995737" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4989339" weight="0.4335512" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -738,124 +839,85 @@
           <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="71" />
+      <option name="time" value="73" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/js/common.1.js">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/common/common.macro.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/adminlte/plugins/jQuery/jquery-2.2.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="716">
+          <caret line="3" column="21429" selection-start-line="3" selection-start-column="21429" selection-end-line="3" selection-end-column="21429" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/layui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        <state relative-caret-position="22">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3133">
-          <caret line="178" column="22" lean-forward="true" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/service/impl/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/core/model/UserInfo.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/xuxueli/xxl-sso-core/1.1.1-RELEASE/xxl-sso-core-1.1.1-RELEASE.jar!/com/xxl/sso/core/conf/Conf.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/xuxueli/xxl-sso-core/1.1.1-RELEASE/xxl-sso-core-1.1.1-RELEASE.jar!/com/xxl/sso/core/login/SsoWebLoginHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/AppController.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/resolver/WebExceptionResolver.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/common/common.exception.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/interceptor/PermissionInterceptor.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/interceptor/MyWebMvcConfigurer.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/core/result/ReturnT.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/xuxueli/xxl-sso-core/1.1.1-RELEASE/xxl-sso-core-1.1.1-RELEASE.jar!/com/xxl/sso/core/user/XxlSsoUser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/utils/BeanUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/WebController.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/feign/UserServiceFeign.java">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/login.1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/common.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/lay/modules/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/lay/modules/element.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/lay/modules/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="31579" lean-forward="true" selection-start-line="3" selection-start-column="31579" selection-end-line="3" selection-end-column="31579" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/config/XxlSsoConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="43">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-822">
+          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -870,141 +932,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/UserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="37" column="78" lean-forward="true" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/XxlSsoServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-          <folding>
-            <element signature="e#1880#1881#0" expanded="true" />
-            <element signature="e#1946#1947#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2501#2502#0" expanded="true" />
-            <element signature="e#2552#2553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/constant/PublicConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="42" column="29" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="29" />
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/enums/ResultStatusCode.java">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/src/main/java/com/opendev/api/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="180" column="46" selection-start-line="180" selection-start-column="46" selection-end-line="180" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/feign/BbsServiceFeign.java" />
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/main.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/resources/templates/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/java/com/xxl/sso/server/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="94" column="65" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/CMSManagerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="274">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1015,50 +953,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/config/XxlSsoConfig.java">
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="242">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/pom.xml">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/assets/font/ai.eot">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/assets/font/ai.eot">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/common/common.exception.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/main.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/pom.xml">
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/resources/templates/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state relative-caret-position="242">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/BBSApplication.java">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/templates/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="154">
+          <caret line="7" column="83" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/config/XxlSsoConfig.java">
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="330">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/CMSManagerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/config/XxlSsoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-basics/opendev-xxl-sso-server/src/main/resources/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/assets/layui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="694" selection-start-line="1" selection-start-column="694" selection-end-line="1" selection-end-column="694" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1276">
+          <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/index/console.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/common/common.macro.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="73" column="43" lean-forward="true" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/static/assets/lay/modules/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="1590" selection-start-line="1" selection-start-column="1590" selection-end-line="1" selection-end-column="1590" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.10.RELEASE/spring-beans-5.1.10.RELEASE.jar!/org/springframework/beans/BeanUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="335" column="23" selection-start-line="335" selection-start-column="23" selection-end-line="335" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/utils/BeanUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-beans/opendev-user-bean/src/main/java/com/opendev/dto/UserOutputDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="115" column="36" lean-forward="true" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-common/opendev-common-core/src/main/java/com/opendev/base/BaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-server-api-impl/opendev-user-server-api-impl/src/main/java/com/opendev/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-server-api/opendev-user-server-api/src/main/java/com/opendev/api/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-bbs/src/main/java/com/opendev/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/java/com/opendev/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="337">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opendev-portal/opendev-web-cms/src/main/resources/templates/user/users.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

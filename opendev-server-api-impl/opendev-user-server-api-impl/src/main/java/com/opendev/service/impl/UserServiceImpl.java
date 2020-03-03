@@ -172,11 +172,12 @@ public class UserServiceImpl extends BaseService implements UserService {
 
     @Override
     public BaseResponse getUserListByPage(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit) {
+        page = (page - 1) * limit;
         List<User> userList = userMapper.selectByPageLimit(page, limit);
         List<UserOutputDTO> userOutputDTOS = new ArrayList<>();
-        userList.stream().forEach(v -> {
-            userOutputDTOS.add(BeanUtil.doToDto(v, UserOutputDTO.class));
-        });
+        for (User user : userList){
+            userOutputDTOS.add(BeanUtil.doToDto(user, UserOutputDTO.class));
+        }
         Long count = userMapper.count();
         return success(userOutputDTOS, count);
     }
